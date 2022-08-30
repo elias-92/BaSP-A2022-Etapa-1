@@ -1,8 +1,11 @@
 # BaSP-A2022/Trackgenix
 
-![](week-02/assets/img/logo.png)  ![](week-02/assets/img/trackgenix.png)
+<p align="center">
+   <img src="week-02\assets\img\logo.png">
+   <img src="week-02\assets\img\trackgenix.png">
+</p>
 
-##What is it Trackgenix	:question:
+## What is it Trackgenix :question:
 
 It is a revolutionary system that will allow you to efficiently manage your projects, schedule flow, select jobs and teams. Designed for GigaTech Software Solutions SA.
 
@@ -12,31 +15,31 @@ Our goal is to allow workers all over the world to reach their full potential.Ou
 
 ## 🛠️ Used technology
 
-```
+
 :white_check_mark: HTML
-```
+
 ## :open_file_folder: Clone project
 
-To clone this project copy and paste this link into your local repository ![](https://github.com/elias-92/BaSP-A2022-Etapa-1.git)
+To clone this project copy and paste this link into your local repository `https://github.com/elias-92/BaSP-A2022-Etapa-1.git`
 
-## :eyes: weekly progress :eyes:
+##  weekly progress :eyes:
 
 ### Week 1
 #### Layout of the project in figma
 
-- [x] *Presentation of the project to be carried out.
-- [x] *The project is divided into different sections as well as the group in teams of 3 or 4 people.
-- [x] *Planning and edition of views.
-- [x] *Interaction and functionality.
+- [x] *Presentation of the project to be carried out.*
+- [x] *The project is divided into different sections as well as the group in teams of 3 or 4 people.*
+- [x] *Planning and edition of views.*
+- [x] *Interaction and functionality.*
 
 ### Week 2
 
 #### Landing page HTML structure
 
-- [x] *Create git and github repositories.
-- [x] *Semantic html structure.
-- [x] *Save progress to git and push to github.
-- [x] *Create README.
+- [x] *Create git and github repositories.*
+- [x] *Semantic html structure.*
+- [x] *Save progress to git and push to github.*
+- [x] *Create README.*
 
 
 
