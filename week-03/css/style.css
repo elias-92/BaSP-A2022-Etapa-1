@@ -1,8 +1,8 @@
 body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
-
 header {
     background-color: #373867;
     width: 1512px;
@@ -11,7 +11,6 @@ header {
     top: 0;
     z-index: 10;
 }
-
 header .logo {
     position: absolute;
     width: 65px;
@@ -19,7 +18,17 @@ header .logo {
     left: 26px;
     top: 12px;
 }
-
+main {
+    left: 253px;
+    position: relative;
+    width: 1259px;
+}
+footer {
+    margin: 150px 0 0 253px;
+    width: 1259px;
+    height: 74px;
+    background-color: #373867;
+}
 h1 {
     position: absolute;
     height: 70px;
@@ -31,24 +40,20 @@ h1 {
     color: #46A07B;
     text-transform: uppercase;
 }
-
 .nav-main {
     position: fixed;
     top: 91px;
     z-index: 10;
     width: 1512px;
 }
-
 .btn-nav {
     display: none;
 }
-
 .nav-items {
     height: 55px;
     margin-left: 253px;
     background-color: #373867;
 }
-
 .nav-item {
     height: 100%;
     float: left;
@@ -56,28 +61,23 @@ h1 {
     text-align: center;
     border-left: 2px solid #000;
 }
-
-
 .nav-item a {
     text-decoration: none;
     font-size: 20px;
     line-height: 23px;
     color: #479679;
 }
-
 .nav-item a:hover {
     color: aliceblue;
 }
-
-aside {
+.aside {
     position: fixed;
     top: 0;
     width: 253px;
     height: 100%;
     background-color: rgba(55, 56, 103, 0.1);
 }
-
-aside h3 {
+.aside-h3 {
     color: #373867;
     font-size: 19.37px;
     font-weight: 700;
@@ -85,7 +85,6 @@ aside h3 {
     top: 169px;
     left: 100px;
 }
-
 .input-aside {
     position: absolute;
     width: 236px;
@@ -95,7 +94,6 @@ aside h3 {
     border-radius: 3.42px;
     border: 1px solid #444;
 }
-
 .btn-aside {
     position: absolute;
     top: 123px;
@@ -103,58 +101,42 @@ aside h3 {
     border: none;
     background-color: transparent;
 }
-
 .nav-aside {
     position: absolute;
     top: 200px;
     left: 32px;
     text-align: center;
 }
-
-.nav-aside--li {
+.nav-aside-li {
     padding: 18.21px;
     border-bottom: 1px solid #444;
 }
-
-.nav-aside--li a {
+.nav-aside-li a {
     color: #479679;
     text-decoration: none;
     font-size: 16.27px;
 }
-
-.nav-aside--li:last-child {
+.nav-aside-li:last-child {
     border-bottom: none;
 }
-
 .logo-aside {
     position: absolute;
     top: 609px;
     left: 90px;
 }
-
 .p-aside {
     position: absolute;
     top: 710px;
     left: 10px;
     font-size: 11px;
 }
-
-
-main {
-    left: 253px;
-    position: relative;
-    width: 1259px;
-
-}
-
-#welcome-section {
+.welcome-section {
     height: 894px;
     background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
     position: relative;
     top: 149px;
 }
-
-#welcome-section h2 {
+.welcome-section-title {
     text-align: center;
     padding: 10px 38px;
     display: inline-block;
@@ -168,8 +150,7 @@ main {
     border-radius: 20px;
     text-transform: uppercase;
 }
-
-#welcome-section p {
+.welcome-section-description {
     font-size: 28.25px;
     width: 546px;
     position: absolute;
@@ -179,15 +160,13 @@ main {
     letter-spacing: 1px;
     color: #373867;
 }
-
-#welcome-section img {
+.welcome-section-img {
     width: 500px;
     height: 272.5px;
     position: absolute;
     top: 257.56px;
     left: 724.8px;
 }
-
 .border-bottom {
     height: 1px;
     position: absolute;
@@ -196,28 +175,24 @@ main {
     width: 1050px;
     background-color: #444;
 }
-
-#features {
+.features {
     position: relative;
     top: 135px;
     height: 982px;
 }
-
-#features h2 {
+.features-title {
     font-weight: 700;
     font-size: 40px;
     color: #373867;
     margin: 0 0 49px 100px;
 }
-
 .features-box {
     display: inline-block;
     width: 592px;
     height: 350px;
     text-align: center;
 }
-
-.features-box h3 {
+.features-box-title-img {
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
@@ -225,120 +200,102 @@ main {
     margin-bottom: 24px;
     color: #373867;
 }
-
-.features-box img {
+.features-box-img {
     background-color: rgba(170, 206, 155, 0.3);
     padding: 12px;
     border-radius: 20px;
     width: 225px;
     height: 211px;
 }
-
-#whyShould {
+.why-should {
     position: relative;
     height: 982px;
     top: 60px;
 }
-
-.whyShould-title {
+.why-should-title {
     font-weight: 700;
     font-size: 40px;
     color: #373867;
     text-align: center;
     margin-bottom: 120px;
 }
-
-.whyShould-article {
+.why-should-article {
     float: left;
     width: 50%;
     height: 250px;
 }
-
-.whyShould-backgroundImg1,
-.whyShould-backgroundImg2,
-.whyShould-backgroundImg3,
-.whyShould-backgroundImg4 {
+.why-should-background-img-1,
+.why-should-background-img-2,
+.why-should-background-img-3,
+.why-should-background-img-4 {
     position: absolute;
     height: 118px;
     width: 118px;
     background-color: rgba(170, 206, 155, 0.3);
     transform: rotate(45deg);
 }
-
-.whyShould-backgroundImg1 {
+.why-should-background-img-1 {
     top: 160px;
     left: 53px;
     height: 134px;
 }
-
-.whyShould-backgroundImg2 {
+.why-should-background-img-2 {
     top: 154px;
     left: 658px;
 }
-
-.whyShould-backgroundImg3 {
+.why-should-background-img-3 {
     top: 419px;
     left: 41px;
 }
-
-.whyShould-backgroundImg4 {
+.why-should-background-img-4 {
     top: 406px;
     left: 681px;
 }
-
-.whyShould-img {
+.why-should-img {
     margin: 0 50px;
     position: relative;
     vertical-align: top;
 }
-
-.whyShould-box {
+.why-should-box {
     display: inline-block;
     width: 60%;
 }
-
-.shyShould-box--subtitle {
+.why-should-box-subtitle {
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
     color: #373867;
+    margin-bottom: 23px;
 }
-
-.whyShould-box--p {
+.why-should-box-p {
     font-size: 20px;
     line-height: 23px;
     color: #373867;
 }
-
-#inscription {
+.inscription {
     position: relative;
     height: 982px;
 }
-
 .inscrption-title {
     font-weight: 700;
     font-size: 24px;
     color: #000000;
     margin: 0 0 49px 100px
 }
-
 .inscrption-form {
     margin: 0 0 0 100px;
 }
-
-.form-input {
+.inscrption-form-input {
     border: 1px solid #373867;
     border-radius: 4px;
     padding: 10px 12px;
     width: 500px;
 }
-
-.form-input:first-child {
+.inscrption-form-input:first-child {
     margin-right: 29px;
 }
-
-.form-select {
+.inscrption-form-select {
     display: block;
     border: 1px solid #373867;
     border-radius: 4px;
@@ -346,39 +303,30 @@ main {
     padding: 10px 12px;
     margin: 20px 0 70px 0;
 }
-
-.form-label {
-    font-weight: 500;
-    font-size: 13px;
-}
-
-
-.content-switch {
+.inscrption-form-content-switch {
     display: inline-block;
     width: 48%;
+    margin-bottom: 84px;
 }
-
-.content-switch p {
+.inscrption-form-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    vertical-align: text-top;
+}
+.inscrption-form-switch-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.inscrption-form-switch-p {
     display: inline-block;
     vertical-align: sub;
     font-weight: 500;
     font-size: 13px;
     color: #000000;
 }
-
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
 .slider {
     position: absolute;
     cursor: pointer;
@@ -390,7 +338,6 @@ main {
     -webkit-transition: .4s;
     transition: .4s;
 }
-
 .slider:before {
     position: absolute;
     content: "";
@@ -402,47 +349,39 @@ main {
     -webkit-transition: .4s;
     transition: .4s;
 }
-
-input:checked+.slider {
+.inscrption-form-switch-input:checked+.slider {
     background-color: #373867;
 }
-
-input:focus+.slider {
+.inscrption-form-switch-input:focus+.slider {
     box-shadow: 0 0 1px #373867;
 }
-
-input:checked+.slider:before {
+.inscrption-form-switch-input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
-
 .slider.round {
     border-radius: 34px;
 }
-
 .slider.round:before {
     border-radius: 50%;
 }
-
-.div {
-    display: inline-block;
-    text-align: center;
-}
-
-.inscription-subtitle {
+.inscrption-form-switch-input {
     font-weight: 800;
     font-size: 16px;
     margin: 50px 0 20px 0;
 }
-
-.form-textarea {
+.inscription-form-subtitle{
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 23px;
+}
+.inscription-form-textarea {
     width: 1084px;
     display: block;
     border-radius: 4px;
 }
-
-.form-btn {
+.inscription-form-btn {
     width: 200px;
     margin-top: 20px;
     padding: 10px;
@@ -453,27 +392,23 @@ input:checked+.slider:before {
     background-color: #373867;
     border: none;
 }
-
-.form-btn:hover {
+.inscription-form-btn:hover {
     color: #373867;
     background-color: #ebe6e6;
     border: 2px solid #373867;
     transition: all .2s;
 }
-
-#mission {
+.mission {
     background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
     position: relative;
     height: 982px;
 }
-
 .mission-title {
     padding-top: 38px;
     margin-left: 44px;
     font-weight: 700;
     font-size: 24px;
 }
-
 .mission-subtitle {
     display: inline-block;
     font-weight: 700;
@@ -485,13 +420,11 @@ input:checked+.slider:before {
     text-decoration: underline;
     margin: 0 0 20px 44px;
 }
-
 .mission-img {
     margin-left: 130px;
     width: 112px;
     height: 115.45px;
 }
-
 .mission-h3 {
     font-weight: 600;
     font-size: 18px;
@@ -500,7 +433,6 @@ input:checked+.slider:before {
     text-align: center;
     margin: 0 0 24px 44px;
 }
-
 .mission-description {
     margin-left: 44px;
     text-align: center;
@@ -508,9 +440,7 @@ input:checked+.slider:before {
     line-height: 30px;
     color: #1C1C37
 }
-
 .mission-title-quote {
-
     font-weight: 600;
     font-size: 32px;
     letter-spacing: 0.08em;
@@ -518,7 +448,6 @@ input:checked+.slider:before {
     color: #373867;
     margin: 40px 0 19px 44px;
 }
-
 .container-cite {
     margin-left: 44px;
     border-radius: 7px;
@@ -526,14 +455,12 @@ input:checked+.slider:before {
     height: 77px;
     padding: 10px;
 }
-
 .quote-description {
     font-style: italic;
     font-weight: 100;
     font-size: 17px;
     color: rgba(0, 0, 0, 0.8);
 }
-
 .mission-cite {
     position: relative;
     top: 16px;
@@ -541,14 +468,12 @@ input:checked+.slider:before {
     left: 950px;
     font-size: 17px;
 }
-
 .aboutUs-title {
     font-weight: 700;
     font-size: 24px;
     color: #373867;
     margin: 80px 0 38px 44px;
 }
-
 .aboutUs-description {
     margin-left: 44px;
     font-weight: 400;
@@ -558,80 +483,85 @@ input:checked+.slider:before {
     width: 60%;
     display: inline-block;
 }
-
 .aboutUs-img {
     width: 385px;
     height: 238px;
     margin-left: 58px;
 }
-
-#products {
+.products {
     position: relative;
-    height: 982px;
+    height: 1300px;
 }
-
 .products-title {
     font-weight: 700;
     font-size: 32px;
     color: #000000;
     margin: 0 0 49px 60px;
 }
-
 .products-box {
     float: left;
     width: 50%;
     text-align: center;
-    height: 450px;
+    margin-bottom: 44px;
 }
-
 .products-img {
-    width: 350px;
+    width: 384px;
+    height: 284px;
 }
-
+.container-description-products {
+    width: 324px;
+    margin-left: 150px;
+    text-align: initial;
+}
 .produts-subtitle {
-    color: red;
+    font-weight: 700;
+    font-size: 21.3846px;
+    line-height: 26px;
+    color: #000000;
+    margin: 30px 0;
 }
-
 .products-descripton {
-    color: red;
+    font-size: 19.58px;
+    line-height: 18.75px;
+    margin-bottom: 15px;
 }
-
-#company {
+.products-list-unordered {
+    margin-left: 22px;
+}
+.products-list-unordered-item {
+    list-style: disc;
+    font-size: 14.69px;
+}
+.company {
     height: 1300px;
     position: relative;
     margin-left: 49px;
 }
-
 .company-title {
     font-weight: 700;
     font-size: 32px;
     margin-bottom: 60px;
 }
-
 .company-img {
     width: 477px;
     height: 304px;
     margin-right: 30px;
 }
-
 .company-container-description {
     display: inline-block;
     width: 50%;
     position: relative;
     bottom: 100px;
 }
-
 .company-subtitle {
     font-weight: 700;
     font-size: 26px;
     margin-bottom: 20px;
 }
-
 .company-description {
     font-size: 21px;
     line-height: 25px;
 }
-
 .border-bottom-company {
     height: 1px;
     position: absolute;
@@ -640,20 +570,17 @@ input:checked+.slider:before {
     width: 1050px;
     background-color: #444;
 }
-
-#support {
+.support {
     position: relative;
     height: 982px;
     margin-left: 49px;
 }
-
 .support-title {
     font-weight: 700;
     font-size: 30px;
     margin-bottom: 60px;
     text-decoration: underline;
 }
-
 .support-description-img {
     font-weight: 500;
     font-size: 23px;
@@ -662,49 +589,41 @@ input:checked+.slider:before {
     width: 500px;
     margin-top: 30px;
 }
-
-.float {
+.support-article-float {
     float: left;
     width: 50%;
 }
-
-.inline-block {
+.support-article-inline-block {
     display: inline-block;
     margin-top: 74px;
 }
-
 .support-second-title {
     font-weight: 700;
     font-size: 34px;
     margin-bottom: 49px;
 }
-
 .support-container-items {
     list-style: auto;
     margin-left: 86px;
     display: inline-block;
     width: 830px;
 }
-
 .support-item {
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
 }
-
-.container-support-time {
+.support-container-time {
     display: inline-block;
     position: relative;
     left: 57px;
 }
-
 .support-time {
     font-weight: 700;
     font-size: 26px;
     color: #1D22EC;
     line-height: 31px;
 }
-
 .support-btn {
     border: none;
     padding: 40px;
@@ -713,42 +632,30 @@ input:checked+.slider:before {
     border-radius: 30px;
     margin: 100px 0 0 350px;
 }
-
-.support-btn a {
+.support-btn-a {
     text-decoration: none;
     font-style: italic;
     font-weight: 700;
     font-size: 26px;
     color: #FFFFFF;
 }
-
-footer {
-    margin: 150px 0 0 253px;
-    width: 1259px;
-    height: 74px;
-    background-color: #373867;
-}
-
-.social-media {
+.footer-social-media {
     display: inline-block;
     position: relative;
     top: 12px;
     left: 400px;
     text-align: center;
 }
-
-.social-media-item {
+.footer-social-media-item {
     float: left;
     width: 120px;
 }
-
-.copyright-footer {
+.footer-copyright {
     height: 70px;
     margin: 100px;
     text-align: center;
 }
-
-.copyright-footer-p {
+.footer-copyright-p {
     font-weight: 700;
     font-size: 14px;
     margin: 14px;
