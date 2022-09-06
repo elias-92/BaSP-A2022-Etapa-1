@@ -56,6 +56,16 @@ To clone this project copy and paste this link into your local repository
 - [x] *Save progress to git and push to github.*
 - [x] *Create README.*
 
+### Week 3
+
+#### Landing page CSS style
+
+- [x] *Give CSS styles to html.*
+- [x] *Pixel perfect methodology without flexbox.*
+- [x] *Save progress to git and push to github.*
+- [x] *Use normalizer.*
+- [x] *To update README.*
+
 
 
 

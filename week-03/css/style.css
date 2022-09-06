@@ -1,5 +1,8 @@
+*{
+    box-sizing: border-box; 
+
+}
 body {
-    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
@@ -11,19 +14,19 @@ header {
     background-color: #373867;
     z-index: 10;
 }
-header .logo {
+.header .logo {
     position: absolute;
     width: 65px;
     height: 67px;
     left: 26px;
     top: 12px;
 }
-main {
+.main {
     position: relative;
     left: 253px;
     width: 1259px;
 }
-footer {
+.footer {
     width: 1259px;
     height: 74px;
     margin: 150px 0 0 253px;
@@ -303,17 +306,17 @@ h1 {
     margin: 0 0 0 100px;
 }
 .inscrption-form-input {
-    width: 500px;
+    width: 554px;
     padding: 10px 12px;
     border: 1px solid #373867;
     border-radius: 4px;
 }
 .inscrption-form-input:first-child {
-    margin-right: 29px;
+    margin-right: 17px;
 }
 .inscrption-form-select {
     display: block;
-    width: 1084px;
+    width: 1128px;
     margin: 20px 0 70px 0;
     padding: 10px 12px;
     border: 1px solid #373867;
