@@ -6,7 +6,18 @@ body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
-header {
+h1 {
+    position: absolute;
+    height: 70px;
+    left: 573px;
+    top: 9px;
+    color: #46A07B;
+    line-height: 70px;
+    font-weight: 700;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+.header {
     position: fixed;
     width: 1512px;
     height: 91px;
@@ -31,17 +42,6 @@ header {
     height: 74px;
     margin: 150px 0 0 253px;
     background-color: #373867;
-}
-h1 {
-    position: absolute;
-    height: 70px;
-    left: 573px;
-    top: 9px;
-    color: #46A07B;
-    line-height: 70px;
-    font-weight: 700;
-    font-size: 60px;
-    text-transform: uppercase;
 }
 .nav-main {
     position: fixed;
