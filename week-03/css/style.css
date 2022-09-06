@@ -4,11 +4,11 @@ body {
     overflow-x: hidden;
 }
 header {
-    background-color: #373867;
+    position: fixed;
     width: 1512px;
     height: 91px;
-    position: fixed;
     top: 0;
+    background-color: #373867;
     z-index: 10;
 }
 header .logo {
@@ -19,14 +19,14 @@ header .logo {
     top: 12px;
 }
 main {
-    left: 253px;
     position: relative;
+    left: 253px;
     width: 1259px;
 }
 footer {
-    margin: 150px 0 0 253px;
     width: 1259px;
     height: 74px;
+    margin: 150px 0 0 253px;
     background-color: #373867;
 }
 h1 {
@@ -34,17 +34,17 @@ h1 {
     height: 70px;
     left: 573px;
     top: 9px;
+    color: #46A07B;
+    line-height: 70px;
     font-weight: 700;
     font-size: 60px;
-    line-height: 70px;
-    color: #46A07B;
     text-transform: uppercase;
 }
 .nav-main {
     position: fixed;
+    width: 1512px;
     top: 91px;
     z-index: 10;
-    width: 1512px;
 }
 .btn-nav {
     display: none;
@@ -55,35 +55,39 @@ h1 {
     background-color: #373867;
 }
 .nav-item {
-    height: 100%;
     float: left;
+    height: 100%;
     width: 207px;
-    text-align: center;
     border-left: 2px solid #000;
+    text-align: center;
 }
-.nav-item a {
-    text-decoration: none;
+.nav-item-a {
     font-size: 20px;
-    line-height: 23px;
     color: #479679;
+    text-decoration: none;
+    line-height: 23px;
 }
-.nav-item a:hover {
+.vertical-align{
+    position: relative;
+    top: 15px;
+}
+.nav-item-a:hover {
     color: aliceblue;
 }
 .aside {
     position: fixed;
-    top: 0;
     width: 253px;
     height: 100%;
+    top: 0;
     background-color: rgba(55, 56, 103, 0.1);
 }
 .aside-h3 {
-    color: #373867;
-    font-size: 19.37px;
-    font-weight: 700;
     position: absolute;
     top: 169px;
     left: 100px;
+    font-size: 19.37px;
+    font-weight: 700;
+    color: #373867;
 }
 .input-aside {
     position: absolute;
@@ -111,10 +115,10 @@ h1 {
     padding: 18.21px;
     border-bottom: 1px solid #444;
 }
-.nav-aside-li a {
-    color: #479679;
+.nav-aside-a {
     text-decoration: none;
     font-size: 16.27px;
+    color: #479679;
 }
 .nav-aside-li:last-child {
     border-bottom: none;
@@ -131,45 +135,56 @@ h1 {
     font-size: 11px;
 }
 .welcome-section {
-    height: 894px;
-    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
     position: relative;
+    height: 894px;
     top: 149px;
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%,
+    rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.background-welcome-blur{
+    position: absolute;
+    width: 307px;
+    height: 81px;
+    left: 474px;
+    top: 40px;
+    background: rgba(170, 206, 155, 0.53);
+    border: 2px solid #000000;
+    filter: blur(4px);
+    border-radius: 20px;
 }
 .welcome-section-title {
-    text-align: center;
-    padding: 10px 38px;
     display: inline-block;
-    background-color: rgba(170, 206, 155, 0.53);
+    position: relative;
+    padding: 10px 38px;
     left: 470.47px;
     margin: 48px 0;
-    position: relative;
+    text-align: center;
+    background-color: rgba(170, 206, 155, 0.53);
+    border-radius: 20px;
     color: #373867;
     font-size: 49.36px;
-    border: 4px solid #a09b9b;
-    border-radius: 20px;
     text-transform: uppercase;
 }
 .welcome-section-description {
-    font-size: 28.25px;
-    width: 546px;
     position: absolute;
-    line-height: 41px;
+    width: 546px;
     top: 268px;
     left: 134px;
-    letter-spacing: 1px;
     color: #373867;
+    font-size: 28.25px;
+    line-height: 41px;
+    letter-spacing: 1px;
 }
 .welcome-section-img {
+    position: absolute;
     width: 500px;
     height: 272.5px;
-    position: absolute;
     top: 257.56px;
     left: 724.8px;
 }
 .border-bottom {
-    height: 1px;
     position: absolute;
+    height: 1px;
     top: 767px;
     left: 104.5px;
     width: 1050px;
@@ -181,10 +196,10 @@ h1 {
     height: 982px;
 }
 .features-title {
+    margin: 0 0 49px 100px;
     font-weight: 700;
     font-size: 40px;
     color: #373867;
-    margin: 0 0 49px 100px;
 }
 .features-box {
     display: inline-block;
@@ -193,19 +208,19 @@ h1 {
     text-align: center;
 }
 .features-box-title-img {
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
-    margin-bottom: 24px;
     color: #373867;
 }
 .features-box-img {
-    background-color: rgba(170, 206, 155, 0.3);
-    padding: 12px;
-    border-radius: 20px;
     width: 225px;
     height: 211px;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: rgba(170, 206, 155, 0.3);
 }
 .why-should {
     position: relative;
@@ -213,11 +228,11 @@ h1 {
     top: 60px;
 }
 .why-should-title {
+    margin-bottom: 120px;
+    text-align: center;
     font-weight: 700;
     font-size: 40px;
     color: #373867;
-    text-align: center;
-    margin-bottom: 120px;
 }
 .why-should-article {
     float: left;
@@ -235,9 +250,10 @@ h1 {
     transform: rotate(45deg);
 }
 .why-should-background-img-1 {
-    top: 160px;
-    left: 53px;
     height: 134px;
+    width: 134px;
+    top: 157px;
+    left: 47px;
 }
 .why-should-background-img-2 {
     top: 154px;
@@ -252,8 +268,8 @@ h1 {
     left: 681px;
 }
 .why-should-img {
-    margin: 0 50px;
     position: relative;
+    margin: 0 50px;
     vertical-align: top;
 }
 .why-should-box {
@@ -261,12 +277,12 @@ h1 {
     width: 60%;
 }
 .why-should-box-subtitle {
+    margin-bottom: 23px;
     font-weight: 700;
     font-size: 30px;
     line-height: 35px;
     text-align: center;
     color: #373867;
-    margin-bottom: 23px;
 }
 .why-should-box-p {
     font-size: 20px;
@@ -278,30 +294,30 @@ h1 {
     height: 982px;
 }
 .inscrption-title {
+    margin: 0 0 49px 100px;
     font-weight: 700;
     font-size: 24px;
     color: #000000;
-    margin: 0 0 49px 100px
 }
 .inscrption-form {
     margin: 0 0 0 100px;
 }
 .inscrption-form-input {
+    width: 500px;
+    padding: 10px 12px;
     border: 1px solid #373867;
     border-radius: 4px;
-    padding: 10px 12px;
-    width: 500px;
 }
 .inscrption-form-input:first-child {
     margin-right: 29px;
 }
 .inscrption-form-select {
     display: block;
+    width: 1084px;
+    margin: 20px 0 70px 0;
+    padding: 10px 12px;
     border: 1px solid #373867;
     border-radius: 4px;
-    width: 1084px;
-    padding: 10px 12px;
-    margin: 20px 0 70px 0;
 }
 .inscrption-form-content-switch {
     display: inline-block;
@@ -316,9 +332,9 @@ h1 {
     vertical-align: text-top;
 }
 .inscrption-form-switch-input {
-    opacity: 0;
     width: 0;
     height: 0;
+    opacity: 0;
 }
 .inscrption-form-switch-p {
     display: inline-block;
@@ -340,11 +356,11 @@ h1 {
 }
 .slider:before {
     position: absolute;
-    content: "";
     height: 26px;
     width: 26px;
     left: 4px;
     bottom: 4px;
+    content: "";
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -377,20 +393,20 @@ h1 {
     margin-bottom: 23px;
 }
 .inscription-form-textarea {
-    width: 1084px;
     display: block;
+    width: 1084px;
     border-radius: 4px;
 }
 .inscription-form-btn {
     width: 200px;
     margin-top: 20px;
     padding: 10px;
+    border: none;
     color: #fff;
+    background-color: #373867;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: 700;
-    border-radius: 4px;
-    background-color: #373867;
-    border: none;
 }
 .inscription-form-btn:hover {
     color: #373867;
@@ -399,61 +415,79 @@ h1 {
     transition: all .2s;
 }
 .mission {
-    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
     position: relative;
-    height: 982px;
+    height: 1100px;
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, 
+    rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
 }
 .mission-title {
-    padding-top: 38px;
-    margin-left: 44px;
+    padding-top: 70px;
+    margin:0 0 29px 44px;
     font-weight: 700;
     font-size: 24px;
 }
 .mission-subtitle {
     display: inline-block;
+    margin: 0 0 20px 44px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30.79px;
     line-height: 42px;
     color: #373867;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    text-decoration: underline;
-    margin: 0 0 20px 44px;
+}
+.mission-subtitle-underline-1{
+    position: relative;
+    width: 347px;
+    height: 4px;
+    left: 46px;
+    bottom: 15px;
+    background: #8FD5C8;
+}
+.mission-subtitle-underline-2{
+    position: relative;
+    width: 398px;
+    height: 4px;
+    left: 392px;
+    bottom: 19px;
+    background: #373867;
 }
 .mission-img {
-    margin-left: 130px;
+    position: relative;
     width: 112px;
     height: 115.45px;
+    left: 1040px;
+    bottom: 161px;
 }
 .mission-h3 {
-    font-weight: 600;
-    font-size: 18px;
+    margin: 0 0 24px 44px;
+    text-align: center;
     color: #151515;
     font-style: italic;
-    text-align: center;
-    margin: 0 0 24px 44px;
+    font-weight: 600;
+    font-size: 22px;
 }
 .mission-description {
     margin-left: 44px;
     text-align: center;
     font-size: 19px;
+    color: #1C1C37;
     line-height: 30px;
-    color: #1C1C37
 }
 .mission-title-quote {
+    margin: 40px 0 19px 44px;
     font-weight: 600;
     font-size: 32px;
+    color: #373867;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #373867;
-    margin: 40px 0 19px 44px;
 }
 .container-cite {
+    height: 77px;
+    padding: 10px;
     margin-left: 44px;
     border-radius: 7px;
     background-color: rgba(217, 217, 217, 0.2);
-    height: 77px;
-    padding: 10px;
 }
 .quote-description {
     font-style: italic;
@@ -462,26 +496,26 @@ h1 {
     color: rgba(0, 0, 0, 0.8);
 }
 .mission-cite {
+    display: inline-block;
     position: relative;
     top: 16px;
-    display: inline-block;
     left: 950px;
     font-size: 17px;
 }
 .aboutUs-title {
+    margin: 80px 0 38px 44px;
     font-weight: 700;
     font-size: 24px;
     color: #373867;
-    margin: 80px 0 38px 44px;
 }
 .aboutUs-description {
+    width: 60%;
+    display: inline-block;
     margin-left: 44px;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     color: #373867;
-    width: 60%;
-    display: inline-block;
 }
 .aboutUs-img {
     width: 385px;
@@ -493,16 +527,16 @@ h1 {
     height: 1300px;
 }
 .products-title {
+    margin: 0 0 49px 60px;
     font-weight: 700;
     font-size: 32px;
     color: #000000;
-    margin: 0 0 49px 60px;
 }
 .products-box {
     float: left;
     width: 50%;
-    text-align: center;
     margin-bottom: 44px;
+    text-align: center;
 }
 .products-img {
     width: 384px;
@@ -514,33 +548,33 @@ h1 {
     text-align: initial;
 }
 .produts-subtitle {
+    margin: 30px 0;
     font-weight: 700;
     font-size: 21.3846px;
     line-height: 26px;
     color: #000000;
-    margin: 30px 0;
 }
 .products-descripton {
+    margin-bottom: 15px;
     font-size: 19.58px;
     line-height: 18.75px;
-    margin-bottom: 15px;
 }
 .products-list-unordered {
     margin-left: 22px;
 }
 .products-list-unordered-item {
-    list-style: disc;
     font-size: 14.69px;
+    list-style: disc;
 }
 .company {
-    height: 1300px;
     position: relative;
+    height: 1300px;
     margin-left: 49px;
 }
 .company-title {
+    margin-bottom: 60px;
     font-weight: 700;
     font-size: 32px;
-    margin-bottom: 60px;
 }
 .company-img {
     width: 477px;
@@ -549,25 +583,25 @@ h1 {
 }
 .company-container-description {
     display: inline-block;
-    width: 50%;
     position: relative;
+    width: 50%;
     bottom: 100px;
 }
 .company-subtitle {
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 26px;
-    margin-bottom: 20px;
 }
 .company-description {
     font-size: 21px;
     line-height: 25px;
 }
 .border-bottom-company {
-    height: 1px;
     position: absolute;
+    width: 1050px;
+    height: 1px;
     bottom: 139px;
     left: 53px;
-    width: 1050px;
     background-color: #444;
 }
 .support {
@@ -576,18 +610,18 @@ h1 {
     margin-left: 49px;
 }
 .support-title {
+    margin-bottom: 60px;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 60px;
     text-decoration: underline;
 }
 .support-description-img {
-    font-weight: 500;
-    font-size: 23px;
-    line-height: 28px;
-    text-align: center;
     width: 500px;
     margin-top: 30px;
+    font-weight: 500;
+    font-size: 23px;
+    text-align: center;
+    line-height: 28px;
 }
 .support-article-float {
     float: left;
@@ -598,15 +632,15 @@ h1 {
     margin-top: 74px;
 }
 .support-second-title {
+    margin-bottom: 49px;
     font-weight: 700;
     font-size: 34px;
-    margin-bottom: 49px;
 }
 .support-container-items {
-    list-style: auto;
-    margin-left: 86px;
     display: inline-block;
     width: 830px;
+    margin-left: 86px;
+    list-style: auto;
 }
 .support-item {
     font-weight: 700;
@@ -625,18 +659,18 @@ h1 {
     line-height: 31px;
 }
 .support-btn {
-    border: none;
-    padding: 40px;
-    background: #98220D;
-    box-shadow: 0px 4px 2px rgb(0 0 0 / 25%);
-    border-radius: 30px;
     margin: 100px 0 0 350px;
+    padding: 40px;
+    border: none;
+    background: #98220D;
+    border-radius: 30px;
+    box-shadow: 0px 4px 2px rgb(0 0 0 / 25%);
 }
 .support-btn-a {
-    text-decoration: none;
     font-style: italic;
     font-weight: 700;
     font-size: 26px;
+    text-decoration: none;
     color: #FFFFFF;
 }
 .footer-social-media {
@@ -656,7 +690,7 @@ h1 {
     text-align: center;
 }
 .footer-copyright-p {
+    margin: 14px;
     font-weight: 700;
     font-size: 14px;
-    margin: 14px;
 }
