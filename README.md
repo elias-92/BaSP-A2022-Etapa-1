@@ -25,6 +25,7 @@ We believe in integrity, honesty, passion for our client’s ideas and communica
 ## 🛠️ Used technology
 
 :white_check_mark: HTML
+:white_check_mark: CSS
 
 
 
@@ -45,8 +46,6 @@ To clone this project copy and paste this link into your local repository
 - [x] *Planning and edition of views.*
 - [x] *Interaction and functionality.*
 
-
-
 ### Week 2
 
 #### Landing page HTML structure
@@ -55,6 +54,9 @@ To clone this project copy and paste this link into your local repository
 - [x] *Semantic html structure.*
 - [x] *Save progress to git and push to github.*
 - [x] *Create README.*
+
+#### To see the progress online go to this link
+`<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-02/index.html>
 
 ### Week 3
 
@@ -65,6 +67,26 @@ To clone this project copy and paste this link into your local repository
 - [x] *Save progress to git and push to github.*
 - [x] *Use normalizer.*
 - [x] *To update README.*
+
+#### To see the progress online go to this link
+`<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-03/index.html>
+
+### Week 4
+
+#### Landing page CSS style (Flex-box)
+
+- [x] *Use only display flex box.*
+- [x] *metodo mobile first.*
+- [x] *Responsive page:*
+    + *Mobile*
+    + *Tablets*
+    + *Desktop*
+- [x] *Save progress to git and push to github.*
+- [x] *Use normalizer.*
+- [x] *To update README.*
+
+#### To see the progress online go to this link
+`<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-04/index.html>
 
 
 
