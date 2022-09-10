@@ -1,0 +1,99 @@
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%,
+    rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.background-welcome-blur{
+    position: absolute;
+    width: 241px;
+    height: 63.59px;
+    margin: 3rem;
+    background: rgba(170, 206, 155, 0.53);
+    border: 1.7px solid #000000;
+    filter: blur(1.3px);
+    border-radius: 1.7rem;
+}
+.welcome-section-title{
+    position: relative;
+    padding: 4.3rem;
+    color: #373867;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+.welcome-section-description{
+    width: 32.4rem;
+    color: #373867;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    letter-spacing: 0.03rem;
+    text-align: center;
+}
+.welcome-section-img{
+    width: 255.76px;
+    height: 139.4px;
+    margin-bottom: 6.3rem;
+}
+.border-bottom{
+    width: 232.03px;
+    margin-top: 11.5rem;
+    height: 0px;
+    border: 1px solid #373867;
+}
+.features{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.features-title,
+.why-should-title{
+    margin: 7rem 0 5rem 0;
+    font-weight: 700;
+    color: #373867;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.features-box-title-img{
+    margin: 0 0 2rem 0;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #373867;
+}
+.features-box-img{
+    width: 9.9rem;
+    padding: 1.2rem;
+    margin:0 3rem;
+    border-radius: 2rem;
+    background-color: rgba(170, 206, 155, 0.3);
+}
+.why-should{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.why-should-article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 3rem 0;
+}
+.why-should-img{
+    width: 7.7rem;
+}
+.why-should-box{
+    width: 50%;
+}
+.why-should-box-subtitle{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #373867;
+    margin-bottom: 1rem;
+}
+.why-should-box-p{
+    font-size: 1.2rem;
+    color: #373867;
+}
