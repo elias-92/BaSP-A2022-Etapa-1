@@ -82,7 +82,6 @@ video {
     margin: 0;
     padding: 0;
     border: 0;
-    
     font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
@@ -133,7 +132,7 @@ table {
 html,
 body,
 #root {
-    min-width: 280px;
+    min-width: 390px;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;

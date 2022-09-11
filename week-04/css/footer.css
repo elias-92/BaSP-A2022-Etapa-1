@@ -1,0 +1,21 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer-social-media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 9rem;
+    background-color: #373867;
+}
+.footer-icon{
+    width: 3.4rem;
+}
+.footer-copyright-p{
+    margin: 2rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+}

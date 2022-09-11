@@ -5,21 +5,17 @@
     background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%,
     rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
 }
-.background-welcome-blur{
-    position: absolute;
+.welcome-section-title{
     width: 241px;
     height: 63.59px;
-    margin: 3rem;
-    background: rgba(170, 206, 155, 0.53);
-    border: 1.7px solid #000000;
-    filter: blur(1.3px);
-    border-radius: 1.7rem;
-}
-.welcome-section-title{
-    position: relative;
-    padding: 4.3rem;
+    padding: 1rem;
+    margin: 3rem 0;
+    text-align: center;
+    border: 0.2rem solid #94a08f;
+    background: linear-gradient(0deg, rgba(170, 206, 155, 0.53), rgba(170, 206, 155, 0.53));
     color: #373867;
     font-size: 3.8rem;
+    border-radius: 1.7rem;
     text-transform: uppercase;
 }
 .welcome-section-description{
@@ -33,11 +29,11 @@
 .welcome-section-img{
     width: 255.76px;
     height: 139.4px;
-    margin-bottom: 6.3rem;
+    margin: 1rem 0 6.3rem 0;
 }
 .border-bottom{
     width: 232.03px;
-    margin-top: 11.5rem;
+    margin-top: 5.5rem;
     height: 0px;
     border: 1px solid #373867;
 }
@@ -45,7 +41,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 .features-title,
 .why-should-title{
@@ -55,8 +51,13 @@
     font-size: 1.7rem;
     text-align: center;
 }
+.features-container-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .features-box-title-img{
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 1rem 0;
     font-weight: 700;
     font-size: 1.3rem;
     text-align: center;
@@ -67,7 +68,7 @@
     padding: 1.2rem;
     margin:0 3rem;
     border-radius: 2rem;
-    background-color: rgba(170, 206, 155, 0.3);
+    background-color: #aace9b4d;
 }
 .why-should{
     display: flex;
@@ -81,19 +82,316 @@
     width: 100%;
     margin: 3rem 0;
 }
+.why-should-background-img{
+    width: 9rem;
+    height: 9rem;
+    padding: 1rem;
+    transform: rotate(45deg);
+    background-color: #aace9b4d;
+}
 .why-should-img{
-    width: 7.7rem;
+    width: 7rem;
+    padding: 0.5rem;
+    transform: rotate(315deg);
 }
 .why-should-box{
     width: 50%;
 }
 .why-should-box-subtitle{
+    margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: 700;
     color: #373867;
-    margin-bottom: 1rem;
 }
 .why-should-box-p{
     font-size: 1.2rem;
     color: #373867;
+}
+.inscription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inscription-container-title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+.inscription-title{
+    margin: 7.4rem 0 0.3rem 0;
+    font-size: 2.4rem;
+}
+.inscription-title-underline{
+    width: 17rem;
+    height: 0.2rem;
+    margin-bottom: 2.4rem;
+    background-color: #373867;
+}
+.inscription-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 2rem;
+}
+.inscription-form-input{
+    padding: 0.8rem;
+    font-size: 1.4rem;
+}
+.inscription-container-checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.inscription-container-checkbox label{
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.inscription-form-subtitle{
+    display: none;
+}
+.inscription-form-btn{
+    width: 50%;
+    padding: 0.6rem;
+    margin: 0 auto;
+    border-radius: 2rem;
+    border: none;
+    color: antiquewhite;
+    background-color: #373867;
+}
+.mission{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(198, 226, 230, 0.6399) 1.57%, rgba(88, 151, 159, 0.2212) 19.27%,
+    rgba(71, 147, 129, 0.1343) 35.94%, rgba(165, 207, 187, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.mission-title{
+    width: 20rem;
+    padding: .4rem;
+    margin-top: 6rem;
+    font-weight: 700;
+    font-size: 2.2rem;
+    background: #474afa3d;
+    border-radius: 0 1rem 1rem 0;
+}
+.mission-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.mission-box-subtitle{
+    display: flex;
+    flex-direction: column;
+}
+.mission-subtitle{
+    font-weight: 700;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    align-items: center;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    text-decoration: underline #8FD5C8;
+    color: #373867;
+}
+.mission-subtitle-underline{
+    text-decoration: underline #373867;
+}
+.mission-img{
+    width: 9rem;
+    margin-bottom: 2rem;
+}
+.mission-h3{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 6.7rem;
+    text-align: center;
+    color: #151515;
+}
+.mission-description{
+    margin: 0 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #1C1C37;
+    line-height: 2.6rem;
+}
+.mission-title-quote{
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    align-items: center;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: #373867;
+}
+.container-cite{
+    box-shadow: 0px 4px 0.5px #0000000a;
+    border-radius: 0.73rem;
+    background-color: rgba(217, 217, 217, 0.2)
+}
+.quote-description{
+    display: flex;
+    padding: 1rem;
+    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+.mission-cite{
+    display: flex;
+    margin: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.55rem;
+    color: rgba(0, 0, 0, 0.8);
+    justify-content: flex-end;
+}
+.about-us{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.about-us-title{
+    margin: 3rem 0 1rem 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    color: #373867;
+}
+.abuot-us-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-us-description{
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+    color: #373867;
+}
+.about-us-img{
+    width: 29.84rem;
+    margin-top: 2rem;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    margin: 2rem;
+    font-weight: 700;
+    font-size: 2.6rem;
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.products-img{
+    width: 33.3rem;
+}
+.products-container-description{
+    width: 28rem;
+    margin: 2rem;
+}
+.produts-subtitle{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.products-descripton{
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.products-list-unordered{
+    margin-left: 2rem;
+    list-style: disc;
+}
+.products-list-unordered-item{
+    font-size: 1.1rem;
+}
+.company-img{
+    width: 23.5rem;
+}
+.company-container-description{
+    width: 36rem;
+    margin-bottom: 2rem;
+}
+.company-flex-end{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    text-align: end;
+}
+.company-subtitle{
+    margin: 1rem 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.company-description{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+.support-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.support-img{
+    width: 29.6rem;
+}
+.support-description-img{
+    padding: 2rem 5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    text-align: center;
+}
+.tutorials-order-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    margin: 1rem 1rem 4rem 1rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    list-style: decimal;
+}
+.tutorials-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.time{
+    margin-left: 2rem;
+    color: blue;
+}
+.tutorials-btn{
+    display: block;
+    width: 34rem;
+    height: 8.2rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 2.1rem;
+    background: #98220D;
+}
+.tutorials-btn-a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+@media (min-width: 768px){
+    .main{
+        width: 70%;
+    position: relative;
+    left: 30%;
+    }
 }
