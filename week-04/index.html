@@ -49,10 +49,10 @@
             </nav>
         </header>
         <aside class="aside">
-            <form>
-                <input type="search" name="search" id="search" class="input-aside" placeholder="Search">
+            <form class="aside-form">
+                <input id="search" class="aside-input" type="search" name="search" placeholder="Search">
                 <button class="btn-aside">
-                    <img src="./assets/img/Vector-search.png" alt="image search logo">
+                    <img class="aside-icon-search" src="./assets/img/Vector-search.png" alt="image search logo">
                 </button>
             </form>
             <h3 class="aside-h3">Menu</h3>
@@ -72,8 +72,8 @@
                     </li>
                 </ul>
             </nav>
-            <img class="logo-aside" src="./assets/img/logo.png" alt="img radium rocket logo">
-            <p class="p-aside">Developed by GigaTech Software Solutions S.A.</p>
+            <img class="aside-logo" src="./assets/img/logo.png" alt="img radium rocket logo">
+            <p class="aside-p">Developed by GigaTech Software Solutions S.A.</p>
         </aside>
         <main class="main">
             <section id="welcome-section" class="welcome-section">
@@ -166,9 +166,11 @@
                     <div class="inscription-title-underline"></div>
                 </div>
                 <form class="inscription-form">
-                    <input class="inscription-form-input" type="text" name="name" placeholder="Name">
-                    <input class="inscription-form-input" type="email" name="email" placeholder="Email">
-                    <select class="inscription-form-input" name="contact">
+                    <div class="inscription-container-inputs">
+                        <input class="inscription-form-input" type="text" name="name" placeholder="Name">
+                        <input class="inscription-form-input" type="email" name="email" placeholder="Email">
+                    </div>
+                    <select class="inscription-form-select" name="contact">
                         <option hidden selected>Contact area</option>
                         <option>Human resource</option>
                         <option>Systems</option>
@@ -304,7 +306,7 @@
             <section id="company" class="company">
                 <h2 class="title">Company</h2>
                 <div class="container">
-                    <article>
+                    <article class="company-article">
                         <img class="company-img" src="./assets/img/company1.png" alt="image of two skyscrapers">
                         <div class="company-container-description">
                             <h4 class="company-subtitle">GigaTech software solutions SA building.</h4>
@@ -314,7 +316,7 @@
                             </p>
                         </div>
                     </article>
-                    <article class="company-flex-end">
+                    <article class="company-flex-end company-article">
                         <div class="company-container-description">
                             <h4 class="company-subtitle">An inclusive workplace for everyone.</h4>
                             <p class="company-description">
@@ -325,7 +327,7 @@
                         </div>
                         <img class="company-img" src="./assets/img/company2.png" alt="image of two skyscrapers">
                     </article>
-                    <article>
+                    <article class="company-article">
                         <img class="company-img" src="./assets/img/company3.png" alt="image of two skyscrapers">
                         <div class="company-container-description">
                             <h4 class="company-subtitle">Our workplace, our world.</h4>
@@ -344,43 +346,47 @@
                 <h2 class="title">Support</h2>
                 <div class="container">
                     <article class="support-article">
-                        <img class="support-img" src="./assets/img/support1.png" alt="video conference image">
-                        <p class="support-description-img">Phone call or Video conference support from 8am to 4pm everyday</p>
-                    </article>
-                    <article class="support-article">
                         <img class="support-img" src="./assets/img/support2.png" alt="Illustrative image of 24 hour support">
                         <p class="support-description-img">24h support by online chat-bot</p>
+                    </article>
+                    <article class="support-article">
+                        <img class="support-img" src="./assets/img/support1.png" alt="video conference image">
+                        <p class="support-description-img">Phone call or Video conference support from 8am to 4pm everyday</p>
                     </article>
                 </div>
             </section>
             <section class="tutorials">
                 <h2 class="title">Tutorials</h2>
-                    <ol class="tutorials-order-list">
-                        <li class="tutorials-item">
-                            TrackGenix: Quick start guide
-                            <div class="time">05:10</div>
-                        </li>
-                        <li class="tutorials-item">
-                            How to set up TrackGenix for your company: In-depth guide
-                            <div class="time">05:10</div>
-                        </li>
-                        <li class="tutorials-item">
-                            Project management using TrackGenix
-                            <div class="time">05:10</div>
-                        </li>
-                        <li class="tutorials-item">
-                            Unlocking max productivity: Advanced tips and tricks for workers
-                            <div class="time">05:10</div>
-                        </li>
-                        <li class="tutorials-item">
-                            Report reviews guide
-                            <div class="time">05:10</div>
-                        </li>
-                        <li class="tutorials-item">
-                            Google calendar & other web services integration
-                            <div class="time">05:10</div>
-                        </li>
-                    </ol>
+                    <div class="tutorials-container">
+                        <ol class="tutorials-order-list">
+                            <li class="tutorials-item">
+                                TrackGenix: Quick start guide
+                            </li>
+                            <li class="tutorials-item">
+                                How to set up TrackGenix for your company: In-depth guide
+                            </li>
+                            <li class="tutorials-item">
+                                Project management using TrackGenix
+                            </li>
+                            <li class="tutorials-item">
+                                Unlocking max productivity: Advanced tips and tricks for workers
+                            </li>
+                            <li class="tutorials-item">
+                                Report reviews guide
+                            </li>
+                            <li class="tutorials-item">
+                                Google calendar & other web services integration
+                            </li>
+                        </ol>
+                        <ul class="tutorials-time">
+                            <li class="tutorials-item-time">5:10</li>
+                            <li class="tutorials-item-time">31:02</li>
+                            <li class="tutorials-item-time">22:15</li>
+                            <li class="tutorials-item-time">12:40</li>
+                            <li class="tutorials-item-time">09:10</li>
+                            <li class="tutorials-item-time">11:25</li>
+                        </ul>
+                    </div>
                 <button class="tutorials-btn">
                     <a class="tutorials-btn-a" href="https://www.youtube.com/" target="_blank">Browse full playlist on YouTube</a>
                 </button>

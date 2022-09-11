@@ -19,3 +19,9 @@
     font-weight: 700;
     font-size: 1rem;
 }
+@media (min-width: 768px){
+    .footer{
+        width: 70%;
+        margin-left: 30%;
+    }
+}
