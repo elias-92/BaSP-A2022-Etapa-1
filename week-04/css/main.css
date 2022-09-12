@@ -18,6 +18,13 @@
     border-radius: 1.7rem;
     text-transform: uppercase;
 }
+.welcome-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 35rem;
+}
 .welcome-section-description{
     width: 32.4rem;
     color: #373867;
@@ -29,7 +36,6 @@
 .welcome-section-img{
     width: 255.76px;
     height: 139.4px;
-    margin: 1rem 0 6.3rem 0;
 }
 .border-bottom{
     width: 80%;
@@ -74,7 +80,12 @@
     border-radius: 2rem;
     background-color: #aace9b4d;
 }
-.why-should{
+.why-should,
+.inscription,
+.abuot-us-container,
+.about-us-subcontainer,
+.products-box,
+.support-article{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,11 +122,6 @@
     font-size: 1.2rem;
     color: #373867;
 }
-.inscription{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .inscription-container-title{
     display: flex;
     flex-direction: column;
@@ -137,7 +143,9 @@
     flex-direction: column;
     width: 90%;
 }
-.inscription-container-inputs{
+.inscription-container-inputs,
+.mission-box-subtitle,
+.products{
     display: flex;
     flex-direction: column;
 }
@@ -189,10 +197,6 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-}
-.mission-box-subtitle{
-    display: flex;
-    flex-direction: column;
 }
 .mission-subtitle{
     font-weight: 700;
@@ -270,11 +274,6 @@
     line-height: 2.1rem;
     color: #373867;
 }
-.abuot-us-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .about-us-description{
     font-size: 1.5rem;
     line-height: 2.6rem;
@@ -283,10 +282,6 @@
 .about-us-img{
     width: 29.84rem;
     margin-top: 2rem;
-}
-.products{
-    display: flex;
-    flex-direction: column;
 }
 .title{
     margin: 2rem;
@@ -299,11 +294,6 @@
     flex-direction: column;
     align-items: center;
     margin: 1rem;
-}
-.products-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .products-img{
     width: 33.3rem;
@@ -348,11 +338,6 @@
 .company-description{
     font-size: 1.3rem;
     line-height: 1.6rem;
-}
-.support-article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .support-img{
     width: 296px;
@@ -404,29 +389,30 @@
         position: relative;
         left: 30%;
     }
+    .welcome-container{
+        height: 45rem;
+    }
     .welcome-section-img{
         width: 374.76px;
         height: 204.4px;
     }
-    .welcome-section-description{
+    .welcome-section-description,
+    .produts-subtitle{
         font-size: 2.2rem;
     }
-    .features-title{
+    .features-title,
+    .why-should-title{
         font-size: 2.4rem;
     }
-    .features-box-title-img{
+    .features-box-title-img,
+    .why-should-box-subtitle{
         font-size: 1.8rem;
     }
     .features-box-img{
         width: 15rem;
     }
-    .why-should-title{
-        font-size: 2.5rem;
-    }
-    .why-should-box-subtitle{
-        font-size: 1.9rem
-    }
-    .why-should-box-p{
+    .why-should-box-p,
+    .mission-description{
         font-size: 1.5rem;
     }
     .why-should-background-img{
@@ -441,7 +427,8 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    .inscription-container-checkbox label{
+    .inscription-container-checkbox label,
+    .products-list-unordered-item{
         font-size: 1.3rem;
     }
     .inscription-form-input{
@@ -452,11 +439,9 @@
         display: flex;
         flex-direction: row;
     }
-    .mission-h3{
-        font-size: 1.8rem;
-    }
-    .mission-description{
-        font-size: 1.6rem;
+    .mission-h3,
+    .products-descripton{
+        font-size: 1.7rem;
     }
     .mission-title-quote{
         margin: 5rem 1rem;
@@ -484,15 +469,6 @@
         width: 384px;
         height: 284px;
     }
-    .produts-subtitle{
-        font-size: 2.1rem;
-    }
-    .products-descripton{
-        font-size: 1.7rem;
-    }
-    .products-list-unordered-item{
-        font-size: 1.2rem;
-    }
     .container{
         display: flex;
         flex-direction: column;
@@ -506,6 +482,7 @@
     }
     .company-container-description{
         width: 60%;
+        padding: 1rem;
     }
     .support-img{
         width: 369px;
@@ -513,5 +490,102 @@
     }
     .support-description-img{
         font-size: 2.3rem;
+    }
+}
+@media (min-width: 1200px){
+    .welcome-container{
+        flex-direction: row-reverse;
+        width: 90%;
+    }
+    .welcome-section-description{
+        width: 70%;
+        font-size: 2.7rem;
+        line-height: 3rem;
+        text-align: start;
+        letter-spacing: 0.02rem;
+    }
+    .welcome-section-img{
+        width: 50%;
+        height: 60%;
+        padding: 1rem;
+    }
+    .features-title,
+    .why-should-title{
+        font-size: 4rem;
+    }
+    .features-box-title-img,
+    .mission-subtitle{
+        font-size: 3rem;
+    }
+    .features-box-img{
+        width: 25rem;
+    }
+    .why-should-background-img{
+        width: 16rem;
+        height: 16rem;
+    }
+    .why-should-img{
+        width: 13rem;
+    }
+    .why-should-box-subtitle{
+        font-size: 3.5rem
+    }
+    .why-should-box-p,
+    .inscription-form-btn{
+        font-size: 2rem;
+    }
+    .inscription-container-checkbox label{
+        font-size: 1.5rem;
+    }
+    .mission-h3{
+        font-size: 2.2rem;
+    }
+    .mission-description{
+        font-size: 1.9rem;
+    }
+    .mission-title-quote{
+        font-size: 2.7rem;
+    }
+    .about-us-subcontainer{
+        flex-direction: row;
+    }
+    .products-box{
+        width: 50%;
+    } 
+    .products-img{
+        width: 384px;
+        height: 284px;
+    }
+    .produts-subtitle{
+        font-size: 2.4rem;
+    }
+    .products-descripton{
+        font-size: 1.9rem;
+    }
+    .products-list-unordered-item{
+        font-size: 1.7rem;
+    }
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .company-img{
+        width: 477px;
+        height: 304px;
+    }
+    .company-subtitle{
+        font-size: 2.6rem;
+    }
+    .company-description{
+        font-size: 2.1rem;
+        line-height: 4rem;
+    }
+    .support-article{
+        width: 50%;
+    }
+    .support-img{
+        width: 100%;
+        padding: 1rem;
+        height: 330px;
     }
 }

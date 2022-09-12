@@ -51,6 +51,9 @@
     font-size: 1.6rem;
     color: #479679;
 }
+.nav-aside-a:hover{
+    color: #373867;
+}
 .aside-logo{
     margin: 25rem 0 6rem 0;
 }
@@ -61,5 +64,10 @@
 @media (min-width: 768px) {
     .aside{
         display: flex;
+    }
+}
+@media (min-width: 1200px) {
+    .aside-input{
+        padding: .7rem;
     }
 }
