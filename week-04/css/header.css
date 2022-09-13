@@ -56,7 +56,6 @@ h1{
 @media (min-width: 768px) {
     h1{
         width: 100%;
-        margin-right: 7rem;
         text-align: center;
     }
     .header{
@@ -65,7 +64,7 @@ h1{
         z-index: 1;
     }
     .btn-hamburger{
-        display: none;
+        visibility: hidden;
     }
     .header-nav{
         display: block;

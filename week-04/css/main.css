@@ -200,7 +200,7 @@
 }
 .mission-subtitle{
     font-weight: 700;
-    font-size: 2.3rem;
+    font-size: 1.9rem;
     line-height: 2.8rem;
     align-items: center;
     letter-spacing: 0.08rem;
@@ -349,22 +349,18 @@
     line-height: 1.9rem;
     text-align: center;
 }
-.tutorials-container{
-    display: flex;
-    align-items: center;
-    margin: 2rem;
-}
 .tutorials-order-list{
-    margin: 1rem 1rem 4rem 1rem;
+    width: 90%;
+    margin: 4rem auto;
     font-size: 1.9rem;
     font-weight: 700;
     list-style: decimal;
 }
 .tutorials-item{
-    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
 }
-.tutorials-item-time{
-    margin-left: 2rem;
+.tutorials-time{
     color: blue;
 }
 .tutorials-btn{
@@ -445,7 +441,7 @@
     }
     .mission-title-quote{
         margin: 5rem 1rem;
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
     .quote-description{
         font-size: 1.9rem;
