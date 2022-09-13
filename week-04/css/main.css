@@ -381,9 +381,7 @@
 }
 @media (min-width: 768px){
     .main{
-        width: 70%;
-        position: relative;
-        left: 30%;
+        margin-left: min(25%, 320px);
     }
     .welcome-container{
         height: 45rem;

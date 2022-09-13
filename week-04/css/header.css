@@ -22,9 +22,8 @@ h1{
 }
 .header-nav-items{
     display: flex;
-    width: 70%;
-    margin-left: 30%;
     font-size: 2rem;
+    margin-left: min(25%, 320px);
     align-items: center;
 }
 .header-nav-item{

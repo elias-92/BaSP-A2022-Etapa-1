@@ -21,8 +21,7 @@
 }
 @media (min-width: 768px){
     .footer{
-        width: 70%;
-        margin-left: 30%;
+        margin-left: min(25%, 320px);
     }
 }
 @media (min-width: 1200px){
