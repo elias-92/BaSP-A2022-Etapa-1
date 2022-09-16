@@ -24,8 +24,9 @@ We believe in integrity, honesty, passion for our client’s ideas and communica
 
 ## 🛠️ Used technology
 
-:white_check_mark: HTML
-:white_check_mark: CSS
+- [X] :white_check_mark: HTML
+- [X] :white_check_mark: CSS
+- [X] :white_check_mark: JS
 
 
 
@@ -88,7 +89,18 @@ To clone this project copy and paste this link into your local repository
 #### To see the progress online go to this link
 `<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-04/index.html>
 
+### Week 5
 
+#### Excercises JavaScript
 
+- [x] *Variables and operators.*
+- [x] *Strings.*
+- [x] *Arrays.*
+- [x] *if-else.*
+- [x] *For.*
+- [x] *Functions.*
+- [x] *Save the progress of each section in git and push to github.*
+- [x] *To update README.*
 
-
+#### To see the progress online go to this link
+`<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-05/index.html>
