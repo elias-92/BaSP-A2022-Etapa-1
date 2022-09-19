@@ -7,9 +7,9 @@ console.log('\n-Excercises 4.a');
 
 var numRandom = Math.random()*1;
 if (numRandom >= 0.5) {
-    alert(numRandom + '\n Greater than 0,5');
+    alert('-Excercises 4.a \n Random number from 0 to 1 \n' + numRandom + '\n Greater than 0,5');
 } else {
-    alert(numRandom + '\n Lower than 0,5')
+    alert('-Excercises 4.a \n Random number from 0 to 1 \n' + numRandom + '\n Lower than 0,5')
 }
 /*Crear una variable “Age” que contenga un número entero entre 0 y 100 y 
 muestre los siguientes mensajes de alerta:
@@ -25,18 +25,18 @@ console.log('\n-Excercises 4.b');
 
 var age = Math.floor(Math.random() * 100);
 if (age < 2) {
-    alert('El resultados es: ' + age + '\n Es un Bebe');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Bebe');
 }else if(age >= 2 && age <= 12){
-    alert('El resultados es: ' + age + '\n Es un Niño');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Niño');
 }else if(age >= 13 && age <= 19){
-    alert('El resultados es: ' + age + '\n Es un Joven');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Joven');
 }else if(age >= 20 && age <= 30){
-    alert('El resultados es: ' + age + '\n Es un Adolescente');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Adolescente');
 }else if(age >= 31 && age <= 60){
-    alert('El resultados es: ' + age + '\n Es un Adulto');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Adulto');
 }else if(age >= 61 && age <= 75){
-    alert('El resultados es: ' + age + '\n Es un Adulto');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Adulto');
 }
 else {
-    alert('El resultados es: ' + age + '\n Es un Anciano');
+    alert('-Excercises 4.b. The result is: ' + age + '\n A Anciano');
 }
