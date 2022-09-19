@@ -24,9 +24,9 @@ We believe in integrity, honesty, passion for our client’s ideas and communica
 
 ## 🛠️ Used technology
 
-- [X] :white_check_mark: HTML
-- [X] :white_check_mark: CSS
-- [X] :white_check_mark: JS
+:white_check_mark: HTML
+:white_check_mark: CSS
+:white_check_mark: JS
 
 
 

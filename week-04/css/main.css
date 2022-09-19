@@ -12,10 +12,10 @@
     margin: 3rem 0;
     text-align: center;
     border: 0.2rem solid #94a08f;
+    border-radius: 1.7rem;
     background: linear-gradient(0deg, rgba(170, 206, 155, 0.53), rgba(170, 206, 155, 0.53));
     color: #373867;
     font-size: 3.8rem;
-    border-radius: 1.7rem;
     text-transform: uppercase;
 }
 .welcome-container{
@@ -39,8 +39,8 @@
 }
 .border-bottom{
     width: 80%;
-    margin-top: 5.5rem;
     height: 0px;
+    margin-top: 5.5rem;
     border: 1px solid #373867;
 }
 .features{
@@ -52,10 +52,10 @@
 .features-title,
 .why-should-title{
     margin: 7rem 0 5rem 0;
-    font-weight: 700;
-    color: #373867;
-    font-size: 1.7rem;
     text-align: center;
+    color: #373867;
+    font-weight: 700;
+    font-size: 1.7rem;
 }
 .features-container-box{
     display: flex;
@@ -68,10 +68,10 @@
 }
 .features-box-title-img{
     margin: 2rem 0 1rem 0;
-    font-weight: 700;
-    font-size: 1.3rem;
     text-align: center;
     color: #373867;
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 .features-box-img{
     width: 9.9rem;
@@ -114,13 +114,13 @@
 }
 .why-should-box-subtitle{
     margin-bottom: 1rem;
+    color: #373867;
     font-size: 1.8rem;
     font-weight: 700;
-    color: #373867;
 }
 .why-should-box-p{
-    font-size: 1.2rem;
     color: #373867;
+    font-size: 1.2rem;
 }
 .inscription-container-title{
     display: flex;
@@ -152,14 +152,14 @@
 .inscription-form-input,
 .inscription-form-select{
     padding: 0.8rem;
-    font-size: 1.4rem;
     margin: 1rem 0;
+    font-size: 1.4rem;
 }
 .inscription-container-checkbox{
     display: flex;
-    margin: 1rem 0;
     flex-direction: row;
     align-items: center;
+    margin: 1rem 0;
 }
 .inscription-container-checkbox label{
     margin-right: 1rem;
@@ -188,10 +188,10 @@
     width: 20rem;
     padding: .4rem;
     margin-top: 6rem;
-    font-weight: 700;
-    font-size: 2.2rem;
     background: #474afa3d;
     border-radius: 0 1rem 1rem 0;
+    font-weight: 700;
+    font-size: 2.2rem;
 }
 .mission-container{
     display: flex;
@@ -199,14 +199,14 @@
     align-items: flex-end;
 }
 .mission-subtitle{
+    align-items: center;
     font-weight: 700;
+    color: #373867;
     font-size: 1.9rem;
     line-height: 2.8rem;
-    align-items: center;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
     text-decoration: underline #8FD5C8;
-    color: #373867;
 }
 .mission-subtitle-underline{
     text-decoration: underline #373867;
@@ -216,12 +216,12 @@
     margin-bottom: 2rem;
 }
 .mission-h3{
-    font-style: italic;
-    font-weight: 600;
-    font-size: 1.6rem;
-    line-height: 6.7rem;
     text-align: center;
     color: #151515;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 6.7rem;
 }
 .mission-description{
     margin: 0 0.5rem;
@@ -232,35 +232,35 @@
 }
 .mission-title-quote{
     margin: 1rem;
-    font-weight: 600;
-    font-size: 2rem;
     align-items: center;
+    color: #373867;
+    font-size: 2rem;
+    font-weight: 600;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
-    color: #373867;
 }
 .container-cite{
-    box-shadow: 0px 4px 0.5px #0000000a;
     border-radius: 0.73rem;
-    background-color: rgba(217, 217, 217, 0.2)
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0px 4px 0.5px #0000000a;
 }
 .quote-description{
     display: flex;
     padding: 1rem;
-    font-style: italic;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 1.9rem;
 }
 .mission-cite{
     display: flex;
+    justify-content: flex-end;
     margin: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.55rem;
     font-style: italic;
     font-weight: 500;
-    font-size: 1.55rem;
-    color: rgba(0, 0, 0, 0.8);
-    justify-content: flex-end;
 }
 .about-us{
     display: flex;
@@ -269,15 +269,15 @@
 }
 .about-us-title{
     margin: 3rem 0 1rem 0;
-    font-weight: 700;
-    font-size: 1.8rem;
-    line-height: 2.1rem;
     color: #373867;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.1rem;
 }
 .about-us-description{
+    color: #373867;
     font-size: 1.5rem;
     line-height: 2.6rem;
-    color: #373867;
 }
 .about-us-img{
     width: 29.84rem;
@@ -285,8 +285,8 @@
 }
 .title{
     margin: 2rem;
-    font-weight: 700;
     font-size: 2.6rem;
+    font-weight: 700;
     text-decoration: underline;
 }
 .container {
@@ -332,8 +332,8 @@
 }
 .company-subtitle{
     margin: 1rem 0;
-    font-weight: 700;
     font-size: 1.6rem;
+    font-weight: 700;
 }
 .company-description{
     font-size: 1.3rem;
@@ -344,10 +344,10 @@
 }
 .support-description-img{
     padding: 2rem 5rem;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
     text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
 }
 .tutorials-order-list{
     width: 90%;
@@ -374,10 +374,10 @@
 }
 .tutorials-btn-a{
     color: #FFFFFF;
+    font-size: 1.8rem;
     text-decoration: none;
     font-style: italic;
     font-weight: 700;
-    font-size: 1.8rem;
 }
 @media (min-width: 768px){
     .main{
@@ -417,7 +417,6 @@
         width: 10rem;
     }
     .inscription-container-inputs{
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
@@ -430,7 +429,6 @@
         margin: 1rem 0;
     }
     .mission-box-subtitle{
-        display: flex;
         flex-direction: row;
     }
     .mission-h3,
@@ -449,8 +447,8 @@
     }   
     .about-us-description{
         width: 90%;
-        font-size: 2.25rem;
         margin: 2rem 0;
+        font-size: 2.25rem;
     }
     .about-us-img{
         width: 365px;
@@ -464,8 +462,6 @@
         height: 284px;
     }
     .container{
-        display: flex;
-        flex-direction: column;
         align-items: stretch;
     }
     .company-article{
@@ -493,9 +489,9 @@
     }
     .welcome-section-description{
         width: 70%;
+        text-align: start;
         font-size: 2.7rem;
         line-height: 3rem;
-        text-align: start;
         letter-spacing: 0.02rem;
     }
     .welcome-section-img{
@@ -505,6 +501,8 @@
     }
     .features-title,
     .why-should-title{
+        display: block;
+        width: 100%;
         font-size: 4rem;
     }
     .features-box-title-img,
@@ -517,6 +515,13 @@
     .why-should-background-img{
         width: 16rem;
         height: 16rem;
+    }
+    .why-should{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .why-should-article{
+        width: 50%;
     }
     .why-should-img{
         width: 13rem;
