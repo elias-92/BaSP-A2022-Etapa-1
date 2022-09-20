@@ -13,7 +13,7 @@
 .footer-icon{
     width: 3.4rem;
 }
-.footer-copyright-p{
+.footer-copyright-description{
     margin: 2rem;
     text-align: center;
     font-size: 1rem;
@@ -28,7 +28,7 @@
     .footer-social-media{
         justify-content:space-evenly;
     }
-    .footer-copyright-p{
+    .footer-copyright-description{
         font-size: 1.4rem;
     }
 }

@@ -57,7 +57,7 @@
     font-weight: 700;
     font-size: 1.7rem;
 }
-.features-container-box{
+.features-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -90,7 +90,7 @@
     flex-direction: column;
     align-items: center;
 }
-.why-should-article{
+.why-should-container{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -118,7 +118,7 @@
     font-size: 1.8rem;
     font-weight: 700;
 }
-.why-should-box-p{
+.why-should-box-description{
     color: #373867;
     font-size: 1.2rem;
 }
@@ -372,7 +372,7 @@
     border-radius: 2.1rem;
     background: #98220D;
 }
-.tutorials-btn-a{
+.tutorials-btn-youtube{
     color: #FFFFFF;
     font-size: 1.8rem;
     text-decoration: none;
@@ -405,7 +405,7 @@
     .features-box-img{
         width: 15rem;
     }
-    .why-should-box-p,
+    .why-should-box-description,
     .mission-description{
         font-size: 1.5rem;
     }
@@ -520,7 +520,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .why-should-article{
+    .why-should-container{
         width: 50%;
     }
     .why-should-img{
@@ -529,7 +529,7 @@
     .why-should-box-subtitle{
         font-size: 3.5rem
     }
-    .why-should-box-p,
+    .why-should-box-description,
     .inscription-form-btn{
         font-size: 2rem;
     }

@@ -27,18 +27,18 @@
     margin-right: 5%;
     background-color: transparent;
 }
-.aside-h3{
+.aside-menu{
     text-align: center;
     color:#373867;
     font-size: 1.9rem;
     font-weight: 700;
 }
-.nav-aside-ul{
+.nav-aside-content-item{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.nav-aside-li{
+.nav-aside-item{
     width: 100%;
     text-align: center;
     padding: 1.8rem 0;
@@ -47,18 +47,18 @@
 .nav-aside-li:last-child {
     border-bottom: none;
 }
-.nav-aside-a{
+.nav-aside-item-enlace{
     color: #479679;
     font-size: 1.6rem;
     text-decoration: none;
 }
-.nav-aside-a:hover{
+.nav-aside-item-enlace:hover{
     color: #373867;
 }
 .aside-logo{
     margin: 25rem 0 6rem 0;
 }
-.aside-p{
+.aside-description-logo{
     text-align: center;
     font-size: .9rem;
 }
