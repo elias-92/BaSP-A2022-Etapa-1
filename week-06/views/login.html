@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="../css/aside.css">
         <link rel="stylesheet" href="../css/login.css">
         <link rel="stylesheet" href="../css/footer.css">
+        <script src="../js/login.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -76,11 +77,15 @@
         </aside>
         <main class="main">
             <h2 class="title-Login">Login</h2>
-            <form class="form">
-                <label for="email" class="label-form">Email</label>
-                <input type="text" id="email" class="input-form">
-                <label for="password" class="label-form">Password</label>
-                <input type="password" id="password" class="input-form">
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="email" class="label-form">Email</label>
+                    <input type="text" id="email" class="input-form">
+                </div>
+                <div class="form-control">
+                    <label for="password" class="label-form">Password</label>
+                    <input type="password" id="password" class="input-form">
+                </div>
                 <div class="check-container">
                     <input type="checkbox" name="" id="formCheck" class="form-check-box">
                     <label for="formCheck" class="form-remember">Remember me</label>

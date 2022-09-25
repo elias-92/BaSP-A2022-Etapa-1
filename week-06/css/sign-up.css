@@ -42,7 +42,8 @@ h1{
     box-shadow: 3px 4px 4px 2px #00000040;
 }
 .form-container, 
-.flex-column{
+.flex-column,
+.form-control{
     display: flex;
     flex-direction: column;
 }
@@ -60,6 +61,9 @@ h1{
     border-radius: 0.5rem;
     border: 1px solid #373867;
 }
+.input-form:focus{
+    outline: none;
+}
 .question-form{
     padding: 2rem 1rem;
     font-size: 1.3rem;
@@ -71,7 +75,7 @@ h1{
 .btn-form{
     width: 60%;
     padding: 1rem;
-    margin: 0 auto;
+    margin: 2rem auto;
     font-size: 1.7rem;
     font-weight: 700;
     border: none;
@@ -80,6 +84,17 @@ h1{
     color: antiquewhite;
     box-shadow: 2px 2px 2px #74747485;
     
+}
+.red-border-fail{
+    border: 1px solid red;
+}
+.green-border-ok{
+    border: 1px solid green;
+}
+.error-msj{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: red;
 }
 @media (min-width: 768px) {
     h1{

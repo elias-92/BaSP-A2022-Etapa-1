@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="../css/aside.css">
         <link rel="stylesheet" href="../css/sign-up.css">
         <link rel="stylesheet" href="../css/footer.css">
+        <script src="../js/sign-up.js"></script>
         <title>Document</title>
     </head>
     <body>
@@ -76,33 +77,55 @@
         </aside>
         <main class="main">
             <h2 class="title-sign-up">Sign Up</h2>
-            <form class="form">
+            <form id="form" class="form">
                 <div class="form-container">
                     <div class="flex-column">
-                        <label for="name" class="label-form">First Name</label>
-                        <input type="text" id="name" class="input-form">
-                        <label for="lastName" class="label-form">Last Name</label>
-                        <input type="text" id="lastName" class="input-form">
-                        <label for="dni" class="label-form">Document Number</label>
-                        <input type="text" id="dni" class="input-form">
-                        <label for="dateOfBirth" class="label-form">Date of Birth</label>
-                        <input type="date" id="dateOfBirth" class="input-form">
-                        <label for="phone" class="label-form">Phone Number</label>
-                        <input type="text" id="phone" class="input-form">
-                        <label for="address" class="label-form">Address</label>
-                        <input type="text" id="address" class="input-form">
+                        <div class="form-control">
+                            <label for="name" class="label-form">Name</label>
+                            <input type="text" id="name" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="lastName" class="label-form">Last Name</label>
+                            <input type="text" id="lastName" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="dni" class="label-form">Document Number</label>
+                            <input type="text" id="dni" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="dateOfBirth" class="label-form">Date of Birth</label>
+                            <input type="date" id="dateOfBirth" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="phone" class="label-form">Phone Number</label>
+                            <input type="text" id="phone" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="address" class="label-form">Address</label>
+                            <input type="text" id="address" class="input-form">
+                        </div>
                     </div>
                     <div class="flex-column">
-                        <label for="location" class="label-form">Location</label>
-                        <input type="text" id="location" class="input-form">
-                        <label for="postalCode" class="label-form">Postal Code</label>
-                        <input type="text" id="postalCode" class="input-form">
-                        <label for="email" class="label-form">Email</label>
-                        <input type="text" id="email" class="input-form">
-                        <label for="password" class="label-form">Password</label>
-                        <input type="password" id="password" class="input-form">
-                        <label for="confimPassword" class="label-form">Confirm Password</label>
-                        <input type="password" id="confimPassword" class="input-form">
+                        <div class="form-control">
+                            <label for="city" class="label-form">Location</label>
+                            <input type="text" id="city" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="postalCode" class="label-form">Postal Code</label>
+                            <input type="text" id="postalCode" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="email" class="label-form">Email</label>
+                            <input type="text" id="email" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="password" class="label-form">Password</label>
+                            <input type="password" id="password" class="input-form">
+                        </div>
+                        <div class="form-control">
+                            <label for="confirmPassword" class="label-form">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="input-form">
+                        </div>
                     </div>
                 </div>
                     <p class="question-form">Already have an account?

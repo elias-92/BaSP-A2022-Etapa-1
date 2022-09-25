@@ -104,3 +104,17 @@ To clone this project copy and paste this link into your local repository
 
 #### To see the progress online go to this link
 `<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-05/index.html>
+
+### Week 6
+
+#### JavaScript iteration with DOM
+
+- [x] *Create sign in form.*
+- [x] *Create login form.*
+- [x] *Validate input.*
+- [x] *Use event onblur, onclick, onfocus.*
+- [x] *Save the progress of each section in git and push to github.*
+- [x] *To update README.*
+
+#### To see the progress online go to this link
+`<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-06/index.html>
