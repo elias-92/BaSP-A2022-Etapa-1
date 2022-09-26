@@ -1,9 +1,4 @@
 window.onload = function() {
-    var validateLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 
-            's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'Y', 'J', 'K', 'L', 'M', 'N', 
-            'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    var validateNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
     var form = document.getElementById('form');
     form.onsubmit = function(e){
         e.preventDefault();
@@ -15,21 +10,19 @@ window.onload = function() {
     msjErrorEmail.classList.add('error-msj');
 
     inputEmail.onblur = function(){
-        if (inputEmail.value.trim() === '') {
+        if (!inputEmail.value.trim()) {
             inputEmail.classList.add('red-border-fail');
-            msjErrorEmail.textContent = 'campo vacio';
+            msjErrorEmail.textContent = 'Empty field';
             inputEmail.insertAdjacentElement('afterend', msjErrorEmail);
-            console.log('es incorrecto');
         }else if(!validateEmail.test(inputEmail.value.trim())){
             inputEmail.classList.add('red-border-fail');
-            msjErrorEmail.textContent = 'email incorrecto';
+            msjErrorEmail.textContent = 'Wrong email';
             inputEmail.insertAdjacentElement('afterend', msjErrorEmail);
-            console.log('email incorrecto');
         }else{
             inputEmail.classList.add('green-border-ok');
         };
     };
-    inputEmail.onfocus = function(e){
+    inputEmail.onfocus = function(){
         inputEmail.classList.remove('red-border-fail');
         inputEmail.classList.remove('green-border-ok');
         msjErrorEmail.remove();
@@ -39,35 +32,49 @@ window.onload = function() {
     var msjErrorPass = document.createElement('small');
     msjErrorPass.classList.add('error-msj');
     passwordInput.onblur = function() {
-        if (passwordInput.value.trim() === ''){
+        if (!numbersAndLetters(passwordInput.value)){
             passwordInput.classList.add('red-border-fail');
-            msjErrorPass.textContent = 'campo vacio';
+            msjErrorPass.textContent = 'must contain only letters and numbers';
             passwordInput.insertAdjacentElement('afterend', msjErrorPass);
         }else if(passwordInput.value.trim().length < 6){
             passwordInput.classList.add('red-border-fail');
-            msjErrorPass.textContent = 'debe contener +6 caracter';
+            msjErrorPass.textContent = 'must contain more than 6 characters';
             passwordInput.insertAdjacentElement('afterend', msjErrorPass);
         }else{
             passwordInput.classList.add('green-border-ok');
         }
     };
-    passwordInput.onfocus = function(e){
+    passwordInput.onfocus = function(){
         passwordInput.classList.remove('red-border-fail');
         passwordInput.classList.remove('green-border-ok');
         msjErrorPass.remove();
     };
-
     var btnSubmit = document.getElementById('btnForm');
     btnSubmit.onclick = function(e){
         e.preventDefault;
         if (!inputEmail.value.trim() || !passwordInput.value.trim()) {
-            console.log('campos incompletos');
+            alert('Incomplete fields');
         } else if(!validateEmail.test(inputEmail.value.trim())) {
-            console.log('email invalido');
+            alert('Invalid email');
         }else if (passwordInput.value.trim().length < 6){
-            console.log('debe mas de 6 ');
+            alert('Password incorrect');
         }else{
-            alert('Usuario: ' + inputEmail.value + '\n Contraseña: ' + passwordInput.value);
+            alert('User: ' + inputEmail.value + '\n Password: ' + passwordInput.value);
+            inputEmail.classList.remove('green-border-ok');
+            passwordInput.classList.remove('green-border-ok');
+            inputEmail.value = '';
+            passwordInput.value = '';
         }
     };
+};
+function numbersAndLetters(input){
+    for (let index = 0; index < input.length; index++) {
+        if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
+        || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
+        || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122) ){
+        }else{
+            return false;
+        };
+    };
+    return true;
 };
