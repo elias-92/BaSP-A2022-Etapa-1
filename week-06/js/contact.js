@@ -6,8 +6,8 @@ window.onload = function(){
     var msjErrorEmail = document.createElement('small');
     var inputTextarea = document.getElementById('messageTextarea');
     var msjErrorTextarea = document.createElement('small');
-    var selectOptions = document.getElementById('selectOptions');
-    var msjErrorSelectOptions = document.createElement('small');
+    var formContact = document.getElementById('formContact');
+    var msjErrorFormContact = document.createElement('small');
     var btnForm = document.getElementById('btnForm');
     function removeTextAndBorder(input, tagSmall){
         input.classList.remove('red-border-fail');
@@ -67,6 +67,14 @@ window.onload = function(){
     inputEmail.onfocus = function(){
         removeTextAndBorder(inputEmail, msjErrorEmail);
     };
+    formContact.onblur = function(){
+        msjErrorFormContact.classList.add('error-msj');
+        if(formContact.value === 'Contact area'){
+            invalidField(formContact, 'red-border-fail', msjErrorFormContact, 'Empty field');
+        }else{
+            formContact.classList.add('green-border-ok');
+        }
+    }
     inputTextarea.onblur = function(){
         msjErrorTextarea.classList.add('error-msj');
         if(!numbersLettersSpace(inputTextarea.value)){
@@ -96,5 +104,4 @@ window.onload = function(){
         };
     };
 };
-//falta el select!!
 

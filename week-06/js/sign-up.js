@@ -76,7 +76,8 @@ window.onload = function(){
         for (let index = 0; index < input.length; index++) {
             if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
             || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
-            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)){
+            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)
+            || (input.codePointAt(index) >= 164 && input.codePointAt(index) <= 165)){
             }else{
                 return false;
             };
@@ -88,6 +89,7 @@ window.onload = function(){
             if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
             || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
             || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)
+            || (input.codePointAt(index) >= 164 && input.codePointAt(index) <= 165)
             || input.codePointAt(index) === 32){
             }else{
                 return false;
