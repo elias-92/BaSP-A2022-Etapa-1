@@ -1,226 +1,68 @@
 window.onload = function(){
-    var form = document.getElementById('form');
-    form.onsubmit = function(e){
-        e.preventDefault();
-    };
     var inputName = document.getElementById('name');
     var msjErrorName = document.createElement('small');
-    msjErrorName.classList.add('error-msj');
-    inputName.onblur = function(){
-        if (!onlyLetters(inputName.value)){
-            inputName.classList.add('red-border-fail');
-            msjErrorName.textContent = 'check that it has only letters';
-            inputName.insertAdjacentElement('afterend', msjErrorName);
-        }else if (inputName.value.trim().length < 3) {
-            inputName.classList.add('red-border-fail');
-            msjErrorName.textContent = 'must contain more than 3 letters';
-            inputName.insertAdjacentElement('afterend', msjErrorName);
-        }else{
-            inputName.classList.add('green-border-ok');
-        };
-    }
-    inputName.onfocus = function(){
-        inputName.classList.remove('red-border-fail');
-        inputName.classList.remove('green-border-ok');
-        msjErrorName.remove();
-    };
     var inputLastName = document.getElementById('lastName');
     var msjErrorLastName = document.createElement('small');
-    msjErrorLastName.classList.add('error-msj');
-    inputLastName.onblur = function(){
-        if (!onlyLetters(inputLastName.value)){
-            inputLastName.classList.add('red-border-fail');
-            msjErrorLastName.textContent = 'check that it has only letters';
-            inputLastName.insertAdjacentElement('afterend', msjErrorLastName);
-        }else if (inputLastName.value.trim().length < 3){
-            inputLastName.classList.add('red-border-fail');
-            msjErrorLastName.textContent = 'must contain more than 3 letters';
-            inputLastName.insertAdjacentElement('afterend', msjErrorLastName);
-        }else{
-            inputLastName.classList.add('green-border-ok');
-        }
-    }
-    inputLastName.onfocus = function(){
-        inputLastName.classList.remove('red-border-fail');
-        inputLastName.classList.remove('green-border-ok');
-        msjErrorLastName.remove();
-    };
     var inputDni = document.getElementById('dni');
     var msjErrorDni = document.createElement('small');
-    msjErrorDni.classList.add('error-msj');
-    inputDni.onblur = function(){
-        if (!onlyNumbers(inputDni.value)){
-            inputDni.classList.add('red-border-fail');
-            msjErrorDni.textContent = 'check that it has only numbers';
-            inputDni.insertAdjacentElement('afterend', msjErrorDni);
-        }else if (inputDni.value.trim().length < 7) {
-            inputDni.classList.add('red-border-fail');
-            msjErrorDni.textContent = 'must contain more than 7 numbers';
-            inputDni.insertAdjacentElement('afterend', msjErrorDni);
-        }else{
-            inputDni.classList.add('green-border-ok');
-        }
-    }
-    inputDni.onfocus = function(){
-        inputDni.classList.remove('red-border-fail');
-        inputDni.classList.remove('green-border-ok');
-        msjErrorDni.remove();
-    };
     var inputDateOfBirth = document.getElementById('dateOfBirth');
     var msjErrorDateOfBirth = document.createElement('small');
-    msjErrorDateOfBirth.classList.add('error-msj');
-    inputDateOfBirth.onblur = function(){
-        if (inputDateOfBirth.value === '') {
-            inputDateOfBirth.classList.add('red-border-fail');
-            msjErrorDateOfBirth.textContent = 'Empty field';
-            inputDateOfBirth.insertAdjacentElement('afterend', msjErrorDateOfBirth);
-        }else{
-            inputDateOfBirth.classList.add('green-border-ok');
-        };
-    };
-    inputDateOfBirth.onfocus = function(){
-        inputDateOfBirth.classList.remove('red-border-fail');
-        inputDateOfBirth.classList.remove('green-border-ok');
-        msjErrorDateOfBirth.remove();
-    };
     var inputPhone = document.getElementById('phone');
     var msjErrorPhone = document.createElement('small');
-    msjErrorPhone.classList.add('error-msj');
-    inputPhone.onblur = function(){
-        if(!onlyNumbers(inputPhone)){
-            inputPhone.classList.add('red-border-fail');
-            msjErrorPhone.textContent = 'check that it has only numbers';
-            inputPhone.insertAdjacentElement('afterend', msjErrorPhone);
-        }else if (inputPhone.value.length != 10) {
-            inputPhone.classList.add('red-border-fail');
-            msjErrorPhone.textContent = 'must contain 10 numbers';
-            inputPhone.insertAdjacentElement('afterend', msjErrorPhone);
-        }else{
-            inputPhone.classList.add('green-border-ok');
-        }
-    }
-    inputPhone.onfocus = function(){
-        inputPhone.classList.remove('red-border-fail');
-        inputPhone.classList.remove('green-border-ok');
-        msjErrorPhone.remove();
-    };
+    var inputAddress = document.getElementById('address');
+    var msjErrorAddress = document.createElement('small');
     var inputCity = document.getElementById('city');
     var msjErrorCity = document.createElement('small');
-    msjErrorCity.classList.add('error-msj');
-    inputCity.onblur = function(){
-        if (!numbersAndLetters(inputCity.value)){
-            inputCity.classList.add('red-border-fail');
-            msjErrorCity.textContent = 'must contain only letters and numbers';
-            inputCity.insertAdjacentElement('afterend', msjErrorCity);
-        }else if(inputCity.value.trim().length < 3){
-            inputCity.classList.add('red-border-fail');
-            msjErrorCity.textContent = 'must contain more than 3 characters';
-            inputCity.insertAdjacentElement('afterend', msjErrorCity);
-        }else{
-            inputCity.classList.add('green-border-ok');
-        }
-    };
-    inputCity.onfocus = function(){
-        inputCity.classList.remove('red-border-fail');
-        inputCity.classList.remove('green-border-ok');
-        msjErrorCity.remove();
-    };
-
     var inputPostalCode = document.getElementById('postalCode');
     var msjErrorPostalCode = document.createElement('small');
-    msjErrorPostalCode.classList.add('error-msj');
-    inputPostalCode.onblur = function(){
-        if(inputPostalCode.value === ''){
-            inputPostalCode.classList.add('red-border-fail');
-            msjErrorPostalCode.textContent = 'Empty field';
-            inputPostalCode.insertAdjacentElement('afterend', msjErrorPostalCode);
-        }else if(!onlyNumbers(inputPostalCode.value)){
-            inputPostalCode.classList.add('red-border-fail');
-            msjErrorPostalCode.textContent = 'check that it has only numbers';
-            inputPostalCode.insertAdjacentElement('afterend', msjErrorPostalCode);
-        }else if(inputPostalCode.value.length < 4 || inputPostalCode.value.length > 5){
-            inputPostalCode.classList.add('red-border-fail');
-            msjErrorPostalCode.textContent = 'must have four or five numbers';
-            inputPostalCode.insertAdjacentElement('afterend', msjErrorPostalCode);
-        }else{
-            inputPostalCode.classList.add('green-border-ok');
-        }
-    }
-    inputPostalCode.onfocus = function(){
-        inputPostalCode.classList.remove('red-border-fail');
-        inputPostalCode.classList.remove('green-border-ok');
-        msjErrorPostalCode.remove();
-    };
     var validateEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var inputEmail = document.getElementById('email');
     var msjErrorEmail = document.createElement('small');
-    msjErrorEmail.classList.add('error-msj');
-    inputEmail.onblur = function(){
-        if (!inputEmail.value.trim()) {
-            inputEmail.classList.add('red-border-fail');
-            msjErrorEmail.textContent = 'Empty field';
-            inputEmail.insertAdjacentElement('afterend', msjErrorEmail);
-        }else if(!validateEmail.test(inputEmail.value.trim())){
-            inputEmail.classList.add('red-border-fail');
-            msjErrorEmail.textContent = 'email incorrect';
-            inputEmail.insertAdjacentElement('afterend', msjErrorEmail);
-        }else{
-            inputEmail.classList.add('green-border-ok');
-        };
-    };
-    inputEmail.onfocus = function(){
-        inputEmail.classList.remove('red-border-fail');
-        inputEmail.classList.remove('green-border-ok');
-        msjErrorEmail.remove();
-    };
     var passwordInput = document.getElementById('password');
     var msjErrorPass = document.createElement('small');
-    msjErrorPass.classList.add('error-msj');
-    passwordInput.onblur = function(){
-        if (!numbersAndLetters(passwordInput.value)){
-            passwordInput.classList.add('red-border-fail');
-            msjErrorPass.textContent = 'must contain only letters and numbers';
-            passwordInput.insertAdjacentElement('afterend', msjErrorPass);
-        }else if(passwordInput.value.trim().length < 6){
-            passwordInput.classList.add('red-border-fail');
-            msjErrorPass.textContent = 'must contain more six characters';
-            passwordInput.insertAdjacentElement('afterend', msjErrorPass);
-        }else{
-            passwordInput.classList.add('green-border-ok');
-        }
-    };
-    passwordInput.onfocus = function(){
-        passwordInput.classList.remove('red-border-fail');
-        passwordInput.classList.remove('green-border-ok');
-        msjErrorPass.remove();
-    };
     var inputConfirmPass = document.getElementById('confirmPassword');
     var msjErrorConfirmPass = document.createElement('small');
-    msjErrorConfirmPass.classList.add('error-msj');
-    inputConfirmPass.onblur = function(){
-        if (inputConfirmPass.value !== passwordInput.value){
-            inputConfirmPass.classList.add('red-border-fail');
-            msjErrorConfirmPass.textContent = 'Invalid password';
-            inputConfirmPass.insertAdjacentElement('afterend', msjErrorConfirmPass);
-        }else{
-            inputConfirmPass.classList.add('green-border-ok');
+    var btnForm = document.getElementById('btnForm');
+    var form = document.getElementById('form');
+    function containBorderGreen(form){
+        for (let i = 0; i < form.elements.length; i++) {
+            if (form.elements[i].matches('.green-border-ok')) {
+                form.elements[i].classList.remove('green-border-ok');
+                form.elements[i].value = '';
+            } else {
+                return false;
+            };
         };
     };
-    inputConfirmPass.onfocus = function(){
-        inputConfirmPass.classList.remove('red-border-fail');
-        inputConfirmPass.classList.remove('green-border-ok');
-        msjErrorConfirmPass.remove();
+    function containBorderRed(form){
+        for (let i = 0; i < form.elements.length; i++) {
+            if (form.elements[i].matches('.red-border-fail')) {
+                return true;
+            } else {
+                return false;
+            };
+        };
+    };
+    function removeTextAndBorder(input, tagSmall){
+        input.classList.remove('red-border-fail');
+        input.classList.remove('green-border-ok');
+        tagSmall.remove();
+    };
+    function invalidField(input, classList, tagSmall, text){
+        input.classList.add(classList);
+            tagSmall.textContent = text;
+            input.insertAdjacentElement('afterend', tagSmall);
     };
     function onlyLetters(input){
-        for (let index = 0; index < input.length; index++) {
-            if ((input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
-            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)) {
+        for(let index = 0; index < input.length; index++){
+            if((input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
+            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)){
             }else{
                 return false;
-            }
-        }
+            };
+        };
         return true;
-    }
+    };
     function onlyNumbers(input) {
         for (let index = 0; index < input.length; index++) {
             if (input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) {
@@ -230,18 +72,190 @@ window.onload = function(){
         };
         return true;
     };
-    function numbersAndLetters(input) {
+    function numbersAndLetters(input){
         for (let index = 0; index < input.length; index++) {
             if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
             || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
-            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122) ){
+            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)){
             }else{
                 return false;
             };
         };
         return true;
     };
-
+    function numbersLettersSpace(input){
+        for (let index = 0; index < input.length; index++) {
+            if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
+            || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
+            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)
+            || input.codePointAt(index) === 32){
+            }else{
+                return false;
+            };
+        };
+        return true;
+    };
+    form.onsubmit = function(e){
+        e.preventDefault();
+    };
+    inputName.onblur = function(){
+        msjErrorName.classList.add('error-msj');
+        if(!onlyLetters(inputName.value)){
+            invalidField(inputName, 'red-border-fail', msjErrorName, 'check that it has only letters');
+        }else if(inputName.value.trim().length < 3){
+            invalidField(inputName, 'red-border-fail', msjErrorName, 'must contain more than 3 letters');
+        }else{
+            inputName.classList.add('green-border-ok');
+        };
+    };
+    inputName.onfocus = function(){
+        removeTextAndBorder(inputName, msjErrorName);
+    };
+    inputLastName.onblur = function(){
+        msjErrorLastName.classList.add('error-msj');
+        if(!onlyLetters(inputLastName.value)){
+            invalidField(inputLastName, 'red-border-fail', msjErrorLastName, 'check that it has only letters');
+        }else if(inputLastName.value.trim().length < 3){
+            invalidField(inputLastName, 'red-border-fail', msjErrorLastName, 'must contain more than 3 letters');
+        }else{
+            inputLastName.classList.add('green-border-ok');
+        };
+    };
+    inputLastName.onfocus = function(){
+        removeTextAndBorder(inputLastName, msjErrorLastName);
+    };
+    inputDni.onblur = function(){
+        msjErrorDni.classList.add('error-msj');
+        if(!onlyNumbers(inputDni.value)){
+            invalidField(inputDni, 'red-border-fail', msjErrorDni, 'check that it has only numbers');
+        }else if(inputDni.value.trim().length < 7){
+            invalidField(inputDni, 'red-border-fail', msjErrorDni, 'must contain more than 7 numbers');
+        }else{
+            inputDni.classList.add('green-border-ok');
+        };
+    };
+    inputDni.onfocus = function(){
+        removeTextAndBorder(inputDni, msjErrorDni);
+    };
+    inputDateOfBirth.onblur = function(){
+        msjErrorDateOfBirth.classList.add('error-msj');
+        if(inputDateOfBirth.value === ''){
+            invalidField(inputDateOfBirth, 'red-border-fail', msjErrorDateOfBirth, 'Empty field');
+        }else{
+            inputDateOfBirth.classList.add('green-border-ok');
+        };
+    };
+    inputDateOfBirth.onfocus = function(){
+        removeTextAndBorder(inputDateOfBirth, msjErrorDateOfBirth);
+    };
+    inputPhone.onblur = function(){
+        msjErrorPhone.classList.add('error-msj');
+        if(!onlyNumbers(inputPhone)){
+            invalidField(inputPhone, 'red-border-fail', msjErrorPhone, 'check that it has only numbers');
+        }else if(inputPhone.value.length != 10){
+            invalidField(inputPhone, 'red-border-fail', msjErrorPhone, 'must contain 10 numbers');
+        }else{
+            inputPhone.classList.add('green-border-ok');
+        };
+    };
+    inputPhone.onfocus = function(){
+        removeTextAndBorder(inputPhone, msjErrorPhone);
+    };
+    inputAddress.onblur = function(){
+        msjErrorAddress.classList.add('error-msj');
+        if(!numbersLettersSpace(inputAddress.value)){
+            invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain only letters and numbers');
+        }else if(inputAddress.value.length < 6){
+            invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain more than 6 characters');
+        }else if(!inputAddress.value.includes(' ')){
+            invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain at least one space');
+        }else{
+            inputAddress.classList.add('green-border-ok');
+        };
+    };
+    inputAddress.onfocus = function(){
+        removeTextAndBorder(inputAddress, msjErrorAddress);
+    };
+    inputCity.onblur = function(){
+        msjErrorCity.classList.add('error-msj');
+        if(!numbersAndLetters(inputCity.value)){
+            invalidField(inputCity, 'red-border-fail', msjErrorCity, 'must contain only letters and numbers');
+        }else if(inputCity.value.trim().length < 3){
+            invalidField(inputCity, 'red-border-fail', msjErrorCity, 'must contain more than 3 characters');
+        }else{
+            inputCity.classList.add('green-border-ok');
+        };
+    };
+    inputCity.onfocus = function(){
+        removeTextAndBorder(inputCity, msjErrorCity);
+    };
+    inputPostalCode.onblur = function(){
+        msjErrorPostalCode.classList.add('error-msj');
+        if(inputPostalCode.value === ''){
+            invalidField(inputPostalCode, 'red-border-fail', msjErrorPostalCode, 'Empty field');
+        }else if(!onlyNumbers(inputPostalCode.value)){
+            invalidField(inputPostalCode, 'red-border-fail', msjErrorPostalCode, 'check that it has only numbers');
+        }else if(inputPostalCode.value.length < 4 || inputPostalCode.value.length > 5){
+            invalidField(inputPostalCode, 'red-border-fail', msjErrorPostalCode, 'must have four or five numbers');
+        }else{
+            inputPostalCode.classList.add('green-border-ok');
+        };
+    };
+    inputPostalCode.onfocus = function(){
+        removeTextAndBorder(inputPostalCode, msjErrorPostalCode);
+    };
+    inputEmail.onblur = function(){
+        msjErrorEmail.classList.add('error-msj');
+        if (!inputEmail.value.trim()) {
+            invalidField(inputEmail, 'red-border-fail', msjErrorEmail, 'Empty field');
+        }else if(!validateEmail.test(inputEmail.value.trim())){
+            invalidField(inputEmail, 'red-border-fail', msjErrorEmail, 'email incorrect');
+        }else{
+            inputEmail.classList.add('green-border-ok');
+        };
+    };
+    inputEmail.onfocus = function(){
+        removeTextAndBorder(inputEmail, msjErrorEmail);
+    };
+    passwordInput.onblur = function(){
+        msjErrorPass.classList.add('error-msj');
+        if(!numbersAndLetters(passwordInput.value)){
+            passwordInput.classList.add('red-border-fail');
+            msjErrorPass.textContent = 'must contain only letters and numbers';
+            passwordInput.insertAdjacentElement('afterend', msjErrorPass);
+        }else if(passwordInput.value.trim().length < 6){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'must contain more six characters');
+        }else{
+            passwordInput.classList.add('green-border-ok');
+        };
+    };
+    passwordInput.onfocus = function(){
+        removeTextAndBorder(passwordInput, msjErrorPass);
+    };
+    inputConfirmPass.onblur = function(){
+        msjErrorConfirmPass.classList.add('error-msj');
+        if (inputConfirmPass.value !== passwordInput.value){
+            invalidField(inputConfirmPass, 'red-border-fail', msjErrorConfirmPass, 'Invalid password');
+        }else{
+            inputConfirmPass.classList.add('green-border-ok');
+        };
+    };
+    inputConfirmPass.onfocus = function(){
+        removeTextAndBorder(inputConfirmPass, msjErrorConfirmPass);
+    };
+    btnForm.onclick = function(e){
+        e.preventDefault();
+        if (containBorderRed(form)){
+            alert('Please complete all the fields');
+        }else{
+            alert('Name: ' + inputName.value + '\n Lastname: ' + inputLastName.value + '\n Dni: ' + inputDni.value
+            + '\n Birdth of day: ' + inputDateOfBirth.value + '\n Phone: ' + inputPhone.value + '\n Address: '
+            + inputAddress.value + '\n City: ' + inputCity.value + '\n Postal code: ' + inputPostalCode.value
+            + '\n Email: ' + inputEmail.value + '\n Password: ' + passwordInput.value + '\n Confirm password: '
+            + inputConfirmPass.value);
+            containBorderGreen(form);
+        };
+    };
 };
 
 

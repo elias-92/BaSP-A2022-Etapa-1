@@ -380,6 +380,17 @@
     font-style: italic;
     font-weight: 700;
 }
+.red-border-fail{
+    border: 1px solid red;
+}
+.green-border-ok{
+    border: 1px solid green;
+}
+.error-msj{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: red;
+}
 @media (min-width: 768px){
     .main{
         margin-left: min(25%, 320px);
@@ -421,13 +432,19 @@
         flex-direction: row;
         justify-content: space-between;
     }
+    .inscription-container-inputs fieldset{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 1rem;
+    }
+    .inscription-form-input:focus, 
+    .inscription-form-textarea:focus{
+        outline: none;
+    }
     .inscription-container-checkbox label,
     .products-list-unordered-item{
         font-size: 1.3rem;
-    }
-    .inscription-form-input{
-        width: 45%;
-        margin: 1rem 0;
     }
     .mission-box-subtitle{
         flex-direction: row;
