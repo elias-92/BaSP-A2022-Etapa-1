@@ -1,0 +1,608 @@
+.welcome-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%,
+    rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.welcome-section-title{
+    width: 241px;
+    height: 63.59px;
+    padding: 1rem;
+    margin: 3rem 0;
+    text-align: center;
+    border: 0.2rem solid #94a08f;
+    border-radius: 1.7rem;
+    background: linear-gradient(0deg, rgba(170, 206, 155, 0.53), rgba(170, 206, 155, 0.53));
+    color: #373867;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+.welcome-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 35rem;
+}
+.welcome-section-description{
+    width: 32.4rem;
+    color: #373867;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    letter-spacing: 0.03rem;
+    text-align: center;
+}
+.welcome-section-img{
+    width: 255.76px;
+    height: 139.4px;
+}
+.border-bottom{
+    width: 80%;
+    height: 0px;
+    margin: 0 auto;
+    margin-top: 5.5rem;
+    border: 1px solid #373867;
+}
+.features{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.features-title,
+.why-should-title{
+    margin: 7rem 0 5rem 0;
+    text-align: center;
+    color: #373867;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+.features-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.features-box{
+    width: 50%;
+    text-align: center;
+}
+.features-box-title-img{
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    color: #373867;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.features-box-img{
+    width: 9.9rem;
+    padding: 1.2rem;
+    margin:0 3rem;
+    border-radius: 2rem;
+    background-color: #aace9b4d;
+}
+.why-should,
+.inscription,
+.abuot-us-container,
+.about-us-subcontainer,
+.products-box,
+.support-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.why-should-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin: 3rem 0;
+}
+.why-should-background-img{
+    width: 9rem;
+    height: 9rem;
+    padding: 1rem;
+    transform: rotate(45deg);
+    background-color: #aace9b4d;
+}
+.why-should-img{
+    width: 7rem;
+    padding: 0.5rem;
+    transform: rotate(315deg);
+}
+.why-should-box{
+    width: 50%;
+}
+.why-should-box-subtitle{
+    margin-bottom: 1rem;
+    color: #373867;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.why-should-box-description{
+    color: #373867;
+    font-size: 1.2rem;
+}
+.inscription-container-title{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+}
+.inscription-title{
+    margin: 7.4rem 0 0.3rem 0;
+    font-size: 2.4rem;
+}
+.inscription-title-underline{
+    width: 17rem;
+    height: 0.2rem;
+    margin-bottom: 2.4rem;
+    background-color: #373867;
+}
+.inscription-form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.inscription-container-inputs,
+.mission-box-subtitle,
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.inscription-form-input,
+.inscription-form-select{
+    padding: 0.8rem;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+}
+.inscription-container-checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0;
+}
+.inscription-container-checkbox label{
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.inscription-form-subtitle{
+    display: none;
+}
+.inscription-form-btn{
+    width: 50%;
+    padding: 0.6rem;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    border: none;
+    color: antiquewhite;
+    background-color: #373867;
+}
+.mission{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(198, 226, 230, 0.6399) 1.57%, rgba(88, 151, 159, 0.2212) 19.27%,
+    rgba(71, 147, 129, 0.1343) 35.94%, rgba(165, 207, 187, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
+}
+.mission-title{
+    width: 20rem;
+    padding: .4rem;
+    margin-top: 6rem;
+    background: #474afa3d;
+    border-radius: 0 1rem 1rem 0;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+.mission-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.mission-subtitle{
+    align-items: center;
+    font-weight: 700;
+    color: #373867;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    text-decoration: underline #8FD5C8;
+}
+.mission-subtitle-underline{
+    text-decoration: underline #373867;
+}
+.mission-img{
+    width: 9rem;
+    margin-bottom: 2rem;
+}
+.mission-h3{
+    text-align: center;
+    color: #151515;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 6.7rem;
+}
+.mission-description{
+    margin: 0 0.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #1C1C37;
+    line-height: 2.6rem;
+}
+.mission-title-quote{
+    margin: 1rem;
+    align-items: center;
+    color: #373867;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+.container-cite{
+    border-radius: 0.73rem;
+    background-color: rgba(217, 217, 217, 0.2);
+    box-shadow: 0px 4px 0.5px #0000000a;
+}
+.quote-description{
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.6rem;
+    font-style: italic;
+    line-height: 1.9rem;
+}
+.mission-cite{
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1.55rem;
+    font-style: italic;
+    font-weight: 500;
+}
+.about-us{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.about-us-title{
+    margin: 3rem 0 1rem 0;
+    color: #373867;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.1rem;
+}
+.about-us-description{
+    color: #373867;
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+}
+.about-us-img{
+    width: 29.84rem;
+    margin-top: 2rem;
+}
+.title{
+    margin: 2rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+.products-img{
+    width: 33.3rem;
+}
+.products-container-description{
+    width: 28rem;
+    margin: 2rem;
+}
+.produts-subtitle{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.products-descripton{
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+.products-list-unordered{
+    margin-left: 2rem;
+    list-style: disc;
+}
+.products-list-unordered-item{
+    font-size: 1.1rem;
+}
+.company-img{
+    width: 23.5rem;
+}
+.company-container-description{
+    margin-bottom: 2rem;
+}
+.company-flex-end{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    text-align: end;
+}
+.company-subtitle{
+    margin: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.company-description{
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+.support-img{
+    width: 296px;
+}
+.support-description-img{
+    padding: 2rem 5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+}
+.tutorials-order-list{
+    width: 90%;
+    margin: 4rem auto;
+    font-size: 1.9rem;
+    font-weight: 700;
+    list-style: decimal;
+}
+.tutorials-item{
+    display: flex;
+    justify-content: space-between;
+}
+.tutorials-time{
+    color: blue;
+}
+.tutorials-btn{
+    display: block;
+    width: 34rem;
+    height: 8.2rem;
+    margin: 0 auto;
+    border: none;
+    border-radius: 2.1rem;
+    background: #98220D;
+}
+.tutorials-btn-youtube{
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+}
+.red-border-fail{
+    border: 1px solid red;
+}
+.green-border-ok{
+    border: 1px solid green;
+}
+.error-msj{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: red;
+}
+.inscription-form-input:focus, 
+.inscription-form-textarea:focus{
+        outline: none;
+    }
+.inscription-container-inputs fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 1rem;
+}
+@media (min-width: 768px){
+    .main{
+        margin-left: min(25%, 320px);
+    }
+    .welcome-container{
+        height: 45rem;
+    }
+    .welcome-section-img{
+        width: 374.76px;
+        height: 204.4px;
+    }
+    .welcome-section-description,
+    .produts-subtitle{
+        font-size: 2.2rem;
+    }
+    .features-title,
+    .why-should-title{
+        font-size: 2.4rem;
+    }
+    .features-box-title-img,
+    .why-should-box-subtitle{
+        font-size: 1.8rem;
+    }
+    .features-box-img{
+        width: 15rem;
+    }
+    .why-should-box-description,
+    .mission-description{
+        font-size: 1.5rem;
+    }
+    .why-should-background-img{
+        width: 12rem;
+        height: 12rem;
+    }
+    .why-should-img{
+        width: 10rem;
+    }
+    .inscription-container-inputs{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .inscription-container-checkbox label,
+    .products-list-unordered-item{
+        font-size: 1.3rem;
+    }
+    .mission-box-subtitle{
+        flex-direction: row;
+    }
+    .mission-h3,
+    .products-descripton{
+        font-size: 1.7rem;
+    }
+    .mission-title-quote{
+        margin: 5rem 1rem;
+        font-size: 2rem;
+    }
+    .quote-description{
+        font-size: 1.9rem;
+    }
+    .about-us-title{
+        font-size: 2.4rem;
+    }   
+    .about-us-description{
+        width: 90%;
+        margin: 2rem 0;
+        font-size: 2.25rem;
+    }
+    .about-us-img{
+        width: 365px;
+        height: 236px;
+    }
+    .title{
+        font-size: 3rem;
+    }
+    .products-img{
+        width: 384px;
+        height: 284px;
+    }
+    .container{
+        align-items: stretch;
+    }
+    .company-article{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .company-container-description{
+        width: 60%;
+        padding: 1rem;
+    }
+    .support-img{
+        width: 369px;
+        height: 243.19px;
+    }
+    .support-description-img{
+        font-size: 2.3rem;
+    }
+}
+@media (min-width: 1200px){
+    .welcome-container{
+        flex-direction: row-reverse;
+        width: 90%;
+    }
+    .welcome-section-description{
+        width: 70%;
+        text-align: start;
+        font-size: 2.7rem;
+        line-height: 3rem;
+        letter-spacing: 0.02rem;
+    }
+    .welcome-section-img{
+        width: 50%;
+        height: 60%;
+        padding: 1rem;
+    }
+    .features-title,
+    .why-should-title{
+        display: block;
+        width: 100%;
+        font-size: 4rem;
+    }
+    .features-box-title-img,
+    .mission-subtitle{
+        font-size: 3rem;
+    }
+    .features-box-img{
+        width: 25rem;
+    }
+    .why-should-background-img{
+        width: 16rem;
+        height: 16rem;
+    }
+    .why-should{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .why-should-container{
+        width: 50%;
+    }
+    .why-should-img{
+        width: 13rem;
+    }
+    .why-should-box-subtitle{
+        font-size: 3.5rem
+    }
+    .why-should-box-description,
+    .inscription-form-btn{
+        font-size: 2rem;
+    }
+    .inscription-container-checkbox label{
+        font-size: 1.5rem;
+    }
+    .mission-h3{
+        font-size: 2.2rem;
+    }
+    .mission-description{
+        font-size: 1.9rem;
+    }
+    .mission-title-quote{
+        font-size: 2.7rem;
+    }
+    .about-us-subcontainer{
+        flex-direction: row;
+    }
+    .products-box{
+        width: 50%;
+    } 
+    .products-img{
+        width: 384px;
+        height: 284px;
+    }
+    .produts-subtitle{
+        font-size: 2.4rem;
+    }
+    .products-descripton{
+        font-size: 1.9rem;
+    }
+    .products-list-unordered-item{
+        font-size: 1.7rem;
+    }
+    .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .company-img{
+        width: 477px;
+        height: 304px;
+    }
+    .company-subtitle{
+        font-size: 2.6rem;
+    }
+    .company-description{
+        font-size: 2.1rem;
+        line-height: 4rem;
+    }
+    .support-article{
+        width: 50%;
+    }
+    .support-img{
+        width: 100%;
+        padding: 1rem;
+        height: 330px;
+    }
+}

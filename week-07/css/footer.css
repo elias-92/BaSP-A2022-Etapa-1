@@ -1,0 +1,34 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer-social-media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 9rem;
+    background-color: #373867;
+}
+.footer-icon{
+    width: 3.4rem;
+}
+.footer-copyright-description{
+    margin: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+@media (min-width: 768px){
+    .footer{
+        margin-left: min(25%, 320px);
+    }
+}
+@media (min-width: 1200px){
+    .footer-social-media{
+        justify-content:space-evenly;
+    }
+    .footer-copyright-description{
+        font-size: 1.4rem;
+    }
+}

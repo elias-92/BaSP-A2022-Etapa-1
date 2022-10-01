@@ -1,0 +1,6 @@
+html, body{
+    min-width: 390px;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-size: 62.5%;
+}

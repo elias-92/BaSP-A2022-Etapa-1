@@ -118,3 +118,18 @@ To clone this project copy and paste this link into your local repository
 
 #### To see the progress online go to this link
 `<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-06/views/index.html>
+
+### Week 7
+
+#### Use of fetch and local storage
+
+- [x] *Use of fetch.*
+- [x] *Use of catch for the error.*
+- [x] *Use of local storage in sign in.*
+- [x] *Field validations.*
+- [x] *Save the progress of each section in git and push to github.*
+- [x] *To update README.*
+
+#### To see the progress online go to this link
+`<link>` : <https://elias-92.github.io/BaSP-A2022-Etapa-1/week-07/views/index.html>
+

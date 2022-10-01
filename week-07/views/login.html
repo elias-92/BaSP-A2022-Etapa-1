@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/aside.css">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <script src="../js/login.js"></script>
+        <title>Login Trackgenix</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-container">
+                <a href="./login.html">
+                    <img class="header-logo" src="../assets/img/logo.png" alt="img radium rocket logo">
+                </a>
+                <h1>Trackgenix</h1>
+                <button class="btn-hamburger">
+                    <img class="hamburger-img" src="../assets/img/icon-hamburger.svg" alt="icon hamburger">
+                </button>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-nav-items">
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-enlace vertical-align" href="#features">Features</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-enlace" href="#why-should">Why Should You Use Trackgenix</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-enlace vertical-align" href="#mission">History</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-enlace vertical-align" href="#products">Products</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-enlace vertical-align" href="#company">About Us</a>
+                    </li>
+                    <li class="header-nav-item">
+                        <a class="header-nav-item-enlace vertical-align" href="#support">Support</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <aside class="aside">
+            <form class="aside-form">
+                <input id="search" class="aside-input" type="search" name="search" placeholder="Search">
+                <button class="btn-aside">
+                    <img class="aside-icon-search" src="../assets/img/Vector-search.png" alt="image search logo">
+                </button>
+            </form>
+            <h3 class="aside-menu">Menu</h3>
+            <nav class="nav-aside">
+                <ul class="nav-aside-content-item">
+                    <li class="nav-aside-item">
+                        <a class="nav-aside-item-enlace" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-aside-item">
+                        <a class="nav-aside-item-enlace" href="./sign-up.html">Sing up</a>
+                    </li>
+                    <li class="nav-aside-item">
+                        <a class="nav-aside-item-enlace" href="./login.html">Login</a>
+                    </li>
+                    <li class="nav-aside-item">
+                        <a class="nav-aside-item-enlace" href="./index.html#inscription">Contact information</a>
+                    </li>
+                </ul>
+            </nav>
+            <img class="aside-logo" src="../assets/img/logo.png" alt="img radium rocket logo">
+            <p class="aside-description-logo">Developed by GigaTech Software Solutions S.A.</p>
+        </aside>
+        <main class="main">
+            <h2 class="title-Login">Login</h2>
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="email" class="label-form">Email</label>
+                    <input type="text" id="email" class="input-form">
+                </div>
+                <div class="form-control">
+                    <label for="password" class="label-form">Password</label>
+                    <input type="password" id="password" class="input-form">
+                </div>
+                <div class="check-container">
+                    <input type="checkbox" name="" id="formCheck" class="form-check-box">
+                    <label for="formCheck" class="form-remember">Remember me</label>
+                    <a href="#" class="link-form">Forgot password?</a>
+                </div>
+                <p class="question-form">Don't have an account?
+                    <a href="./sign-up.html" class="link-form">Sign-up</a>
+                </p>
+                <button id="btnForm" class="btn-form">Login</button>
+            </form>
+        </main>
+        <footer class="footer">
+            <ul class="footer-social-media">
+                <li class="footer-social-media-item">
+                    <a href="#">
+                        <img class="footer-icon" src="../assets/img/Facebook.png" alt="Facebook img">
+                    </a>
+                </li>
+                <li class="footer-social-media-item">
+                    <a href="#">
+                        <img class="footer-icon" src="../assets/img/Twitter.png" alt="Twitter img">
+                    </a>
+                </li>
+                <li class="footer-social-media-item">
+                    <a href="#">
+                        <img class="footer-icon" src="../assets/img/Instagram.png" alt="Instagram img">
+                    </a>
+                </li>
+                <li class="footer-social-media-item">
+                    <a href="#">
+                        <img class="footer-icon" src="../assets/img/LinkedIn.png" alt="Linkedin img">
+                    </a>
+                </li>
+            </ul>
+            <div class="footer-copyright">
+                <p class="footer-copyright-description">Rosario, Argentina</p>
+                <p class="footer-copyright-description">Copyright © 2022 Radium Rocket. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
