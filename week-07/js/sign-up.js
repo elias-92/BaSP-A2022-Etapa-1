@@ -24,6 +24,17 @@ window.onload = function(){
     var msjErrorConfirmPass = document.createElement('small');
     var btnForm = document.getElementById('btnForm');
     var form = document.getElementById('form');
+    inputName.value = localStorage.getItem('name');
+    inputLastName.value = localStorage.getItem('last name');
+    inputDni.value = localStorage.getItem('dni');
+    inputDateOfBirth.value = localStorage.getItem('birdth');
+    inputPhone.value = localStorage.getItem('phone');
+    inputAddress.value = localStorage.getItem('address');
+    inputCity.value = localStorage.getItem('city');
+    inputPostalCode.value = localStorage.getItem('postal code');
+    inputEmail.value = localStorage.getItem('email');
+    passwordInput.value = localStorage.getItem('password');
+    inputConfirmPass.value = localStorage.getItem('confirm pass');
     function emptyFields(form){
         for (let index = 0; index < form.elements.length; index++){
             if (form.elements[index].value === '') {
@@ -256,18 +267,59 @@ window.onload = function(){
     };
     btnForm.onclick = function(e){
         e.preventDefault();
-        if (containBorderRed(form)){
-            alert('Please complete all the fields');
-        }else if(emptyFields(form)){
-            alert('Empty fields')
-        }else{
-            alert('Name: ' + inputName.value + '\n Lastname: ' + inputLastName.value + '\n Dni: ' + inputDni.value
-            + '\n Birdth of day: ' + inputDateOfBirth.value + '\n Phone: ' + inputPhone.value + '\n Address: '
-            + inputAddress.value + '\n City: ' + inputCity.value + '\n Postal code: ' + inputPostalCode.value
-            + '\n Email: ' + inputEmail.value + '\n Password: ' + passwordInput.value + '\n Confirm password: '
-            + inputConfirmPass.value);
-            containBorderGreen(form);
-        };
+        var year = inputDateOfBirth.value.substring(0, inputDateOfBirth.value.indexOf('-'));
+        var month = inputDateOfBirth.value.substring(inputDateOfBirth.value.indexOf('-') + 1, 
+        inputDateOfBirth.value.indexOf('-') + 3);
+        var day = inputDateOfBirth.value.substring(inputDateOfBirth.value.indexOf('-') + 4, 
+        inputDateOfBirth.value.indexOf('-') + inputDateOfBirth.value.length);
+        var dobArr = [month, day, year];
+        var dobInvested = dobArr.join('/');
+        var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+inputName.value+"&lastName="
+        +inputLastName.value+"&dni="+inputDni.value+"&dob="+dobInvested+"&phone="+inputPhone.value+"&address="
+        +inputAddress.value+"&city="+inputCity.value+"&zip="+inputPostalCode.value+"&email="+inputEmail.value+"&password="
+        +passwordInput.value;
+        fetch(url)
+        .then(function(req){
+            return req.json();
+        })
+        .then(function(dataJSON){
+            if (dataJSON.success) {
+                alert('Request response: \n' + 'Name: ' + inputName.value
+                + '\n Lastname: ' + inputLastName.value + '\n Dni: '
+                + inputDni.value + '\n Birdth of day: ' + dobInvested
+                + '\n Phone: ' + inputPhone.value + '\n Address: '
+                + inputAddress.value + '\n City: ' + inputCity.value
+                + '\n Postal code: ' + inputPostalCode.value
+                + '\n Email: ' + inputEmail.value + '\n Password: '
+                + passwordInput.value + '\n Confirm password: '
+                + inputConfirmPass.value);
+                localStorage.setItem('name', inputName.value);
+                localStorage.setItem('last name', inputLastName.value);
+                localStorage.setItem('dni', inputDni.value);
+                localStorage.setItem('birdth', inputDateOfBirth.value);
+                localStorage.setItem('phone', inputPhone.value);
+                localStorage.setItem('address', inputAddress.value);
+                localStorage.setItem('city', inputCity.value);
+                localStorage.setItem('postal code', inputPostalCode.value);
+                localStorage.setItem('email', inputEmail.value);
+                localStorage.setItem('password', passwordInput.value);
+                localStorage.setItem('confirm pass', inputConfirmPass.value);
+                containBorderGreen(form);
+            } else {
+                return dataJSON; 
+            }
+        })
+        .then(function(dataJSON){
+            errors = dataJSON.errors;
+            errors = [];
+            for (let i = 0; i < dataJSON.errors.length; i++) {
+                errors += '\n' + dataJSON.errors[i].msg;
+            }
+            throw new Error(errors);
+        })
+        .catch(function(error){
+            alert(error);
+        })          
     };
 };
 

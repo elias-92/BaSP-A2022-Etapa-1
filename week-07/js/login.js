@@ -11,6 +11,8 @@ window.onload = function(){
         for (let i = 0; i < form.elements.length; i++) {
             if (form.elements[i].matches('.green-border-ok')) {
                 form.elements[i].classList.remove('green-border-ok');
+                inputEmail.value = '';
+                passwordInput.value = '';
             } else {
                 return false;
             };
@@ -68,32 +70,33 @@ window.onload = function(){
     };
     btnSubmit.onclick = function(e){
         e.preventDefault;
-        if(!inputEmail.value.trim() || !passwordInput.value.trim()){
-            alert('Incomplete fields');
-        }else if(!validateEmail.test(inputEmail.value.trim())) {
-            alert('Invalid email');
-        }else if (passwordInput.value.trim().length < 6){
-            alert('Password incorrect');
-        }else{
-            var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value +
-            '&password=' + passwordInput.value;
-            fetch(url)
-            .then(function(req){
-                return req.json();
-            })
-            .then(function(dataJSON){
-                if (!dataJSON.success) {
-                    throw new Error(dataJSON.msg + '\n Success: ' + dataJSON.success);
-                } else {
-                    alert('Success: ' + dataJSON.success + '\n' + dataJSON.msg + '\n Email: ' + inputEmail.value
-                    + '\n Password: ' + passwordInput.value);
-                }
-            })
-            .catch(function(error){
-                alert(error);
-            })
-            alert('User: ' + inputEmail.value + '\n Password: ' + passwordInput.value);
-            containBorderGreen(form);           
-        };
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?email=' + inputEmail.value +
+        '&password=' + passwordInput.value;
+        fetch(url)
+        .then(function(req){
+            return req.json();
+        })
+        .then(function(dataJSON){
+            if (dataJSON.success) {
+                alert('Success: ' + dataJSON.success + '\n' + dataJSON.msg + '\n Email: ' + inputEmail.value
+                + '\n Password: ' + passwordInput.value);
+                containBorderGreen(form);
+            } else {
+                return dataJSON;
+            }
+        })
+        .then(function(dataJSON){
+            return dataJSON.errors;
+        })
+        .then(function(err){
+            var errorsArr = [];
+            for (let i = 0; i < err.length; i++) {
+                errorsArr += '\n' + err[i].msg;
+            }
+            throw new Error(errorsArr)
+        })
+        .catch(function(error){
+            alert(error);
+        })
     };
 };
