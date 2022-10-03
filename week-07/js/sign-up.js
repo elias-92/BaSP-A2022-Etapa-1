@@ -35,29 +35,11 @@ window.onload = function(){
     inputEmail.value = localStorage.getItem('email');
     passwordInput.value = localStorage.getItem('password');
     inputConfirmPass.value = localStorage.getItem('confirm pass');
-    function emptyFields(form){
-        for (let index = 0; index < form.elements.length; index++){
-            if (form.elements[index].value === '') {
-                return true;
-            }else{
-                return false;
-            };           
-        };
-    };
     function containBorderGreen(form){
         for (let i = 0; i < form.elements.length; i++) {
             if (form.elements[i].matches('.green-border-ok')) {
                 form.elements[i].classList.remove('green-border-ok');
                 form.elements[i].value = '';
-            } else {
-                return false;
-            };
-        };
-    };
-    function containBorderRed(form){
-        for (let i = 0; i < form.elements.length; i++) {
-            if (form.elements[i].matches('.red-border-fail')) {
-                return true;
             } else {
                 return false;
             };
@@ -104,16 +86,20 @@ window.onload = function(){
         };
         return true;
     };
-    function numbersLettersSpace(input){
-        for (let index = 0; index < input.length; index++) {
-            if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
-            || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
-            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)
-            || (input.codePointAt(index) >= 164 && input.codePointAt(index) <= 165)
-            || input.codePointAt(index) === 32){
-            }else{
-                return false;
-            };
+    function space(input){
+        var newArr = input.split('')
+        for (let index = 0; index < newArr.length; index++) {
+            if ( newArr[index] === ' '){
+                if (newArr[0] === ' '){
+                    return false;
+                };
+                if( newArr[index+1] === ' '){
+                    return false;
+                };
+                if(newArr[newArr.length - 1] === ' '){
+                    return false;
+                };
+            }
         };
         return true;
     };
@@ -185,15 +171,17 @@ window.onload = function(){
     };
     inputAddress.onblur = function(){
         msjErrorAddress.classList.add('error-msj');
-        if(!numbersLettersSpace(inputAddress.value)){
+        if (onlyLetters(inputAddress.value.trim()) || onlyNumbers(inputAddress.value.trim())) {
             invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain only letters and numbers');
-        }else if(inputAddress.value.length < 6){
-            invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain more than 6 characters');
-        }else if(!inputAddress.value.includes(' ')){
+        } else if (!inputAddress.value.includes(' ')) {
             invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain at least one space');
-        }else{
+        } else if (!space(inputAddress.value)) {
+            invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'cannot contain trailing spaces');
+        } else if(inputAddress.value.length < 6){
+            invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain more than 6 characters');
+        } else {
             inputAddress.classList.add('green-border-ok');
-        };
+        }
     };
     inputAddress.onfocus = function(){
         removeTextAndBorder(inputAddress, msjErrorAddress);
@@ -241,12 +229,14 @@ window.onload = function(){
     };
     passwordInput.onblur = function(){
         msjErrorPass.classList.add('error-msj');
-        if(!numbersAndLetters(passwordInput.value)){
-            passwordInput.classList.add('red-border-fail');
-            msjErrorPass.textContent = 'must contain only letters and numbers';
-            passwordInput.insertAdjacentElement('afterend', msjErrorPass);
-        }else if(passwordInput.value.trim().length < 6){
+        if(onlyLetters(passwordInput.value) || onlyNumbers(passwordInput.value)){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'must contain only letters and numbers');
+        }else if(passwordInput.value.length < 6){
             invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'must contain more six characters');
+        }else if(!space(passwordInput.value)){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'cannot contain spaces');
+        }else if(passwordInput.value.includes(' ')){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'cannot contain spaces');
         }else{
             passwordInput.classList.add('green-border-ok');
         };
@@ -276,8 +266,8 @@ window.onload = function(){
         var dobInvested = dobArr.join('/');
         var url = "https://basp-m2022-api-rest-server.herokuapp.com/signup?name="+inputName.value+"&lastName="
         +inputLastName.value+"&dni="+inputDni.value+"&dob="+dobInvested+"&phone="+inputPhone.value+"&address="
-        +inputAddress.value+"&city="+inputCity.value+"&zip="+inputPostalCode.value+"&email="+inputEmail.value+"&password="
-        +passwordInput.value;
+        +inputAddress.value+"&city="+inputCity.value+"&zip="+inputPostalCode.value+"&email="+inputEmail.value+
+        "&password="+passwordInput.value;
         fetch(url)
         .then(function(req){
             return req.json();
@@ -310,8 +300,10 @@ window.onload = function(){
             }
         })
         .then(function(dataJSON){
+            console.log(dataJSON);
             errors = dataJSON.errors;
-            errors = [];
+            console.log(errors);
+            var errors = [];
             for (let i = 0; i < dataJSON.errors.length; i++) {
                 errors += '\n' + dataJSON.errors[i].msg;
             }

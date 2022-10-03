@@ -1,5 +1,4 @@
 window.onload = function(){
-    var form = document.getElementById('form');
     var validateEmail = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var inputEmail = document.getElementById('email');
     var msjErrorEmail = document.createElement('small');
@@ -28,14 +27,39 @@ window.onload = function(){
             tagSmall.textContent = text;
             input.insertAdjacentElement('afterend', tagSmall);
     };
-    function numbersAndLetters(input){
-        for (let index = 0; index < input.length; index++){
-            if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
-            || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
+    function onlyLetters(input){
+        for(let index = 0; index < input.length; index++){
+            if((input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
             || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)){
             }else{
                 return false;
             };
+        };
+        return true;
+    };
+    function onlyNumbers(input) {
+        for (let index = 0; index < input.length; index++) {
+            if (input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) {
+            }else{
+                return false;
+            };
+        };
+        return true;
+    }
+    function space(input){
+        var newArr = input.split('')
+        for (let index = 0; index < newArr.length; index++) {
+            if ( newArr[index] === ' '){
+                if (newArr[0] === ' '){
+                    return false;
+                };
+                if( newArr[index+1] === ' '){
+                    return false;
+                };
+                if(newArr[newArr.length - 1] === ' '){
+                    return false;
+                };
+            }
         };
         return true;
     };
@@ -57,14 +81,18 @@ window.onload = function(){
     };
     passwordInput.onblur = function(){
         msjErrorPass.classList.add('error-msj');
-        if(!numbersAndLetters(passwordInput.value)){
+        if(onlyLetters(passwordInput.value) || onlyNumbers(passwordInput.value)){
             invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'must contain only letters and numbers');
-        }else if(passwordInput.value.trim().length < 6){
-            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'must contain more than 6 characters');
+        }else if(passwordInput.value.length < 6){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'must contain more six characters');
+        }else if(!space(passwordInput.value)){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'cannot contain spaces');
+        }else if(passwordInput.value.includes(' ')){
+            invalidField(passwordInput, 'red-border-fail', msjErrorPass, 'cannot contain spaces');
         }else{
             passwordInput.classList.add('green-border-ok');
         };
-    };
+    }
     passwordInput.onfocus = function(){
         removeTextAndBorder(passwordInput, msjErrorPass);
     };
@@ -86,14 +114,7 @@ window.onload = function(){
             }
         })
         .then(function(dataJSON){
-            return dataJSON.errors;
-        })
-        .then(function(err){
-            var errorsArr = [];
-            for (let i = 0; i < err.length; i++) {
-                errorsArr += '\n' + err[i].msg;
-            }
-            throw new Error(errorsArr)
+            throw new Error(dataJSON.msg);
         })
         .catch(function(error){
             alert(error);
