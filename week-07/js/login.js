@@ -117,7 +117,13 @@ window.onload = function(){
             return req.json();
         })
         .then(function(dataJSON){
-            if (dataJSON.msg){
+            if(dataJSON.success) {
+                modalTitle.innerText ='Request completed';
+                modalBodyText.innerText = 'Success: ' + dataJSON.success + '\n' + dataJSON.msg + '\n Email: ' + inputEmail.value
+                + '\n Password: ' + passwordInput.value;
+                openModal();
+                containBorderGreen(form);
+            }else if (dataJSON.msg){
                 throw new Error(dataJSON.msg);
             }else if(!dataJSON.success){
                 var errors = [];
@@ -125,12 +131,6 @@ window.onload = function(){
                     errors += '\n' + dataJSON.errors[i].msg;
                 }
                 throw new Error(errors);
-            } else {
-                modalTitle.innerText ='Request completed';
-                modalBodyText.innerText = 'Success: ' + dataJSON.success + '\n' + dataJSON.msg + '\n Email: ' + inputEmail.value
-                + '\n Password: ' + passwordInput.value;
-                openModal();
-                containBorderGreen(form);
             }
         })
         .catch(function(error){
