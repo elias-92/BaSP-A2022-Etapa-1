@@ -24,6 +24,10 @@ window.onload = function(){
     var msjErrorConfirmPass = document.createElement('small');
     var btnForm = document.getElementById('btnForm');
     var form = document.getElementById('form');
+    var modal = document.getElementById('modal');
+    var modalTitle = document.getElementById('modalTitle');
+    var modalBodyText = document.getElementById('modalBody');
+    var btnCloseModal = document.getElementById('closeModal');
     inputName.value = localStorage.getItem('name');
     inputLastName.value = localStorage.getItem('last name');
     inputDni.value = localStorage.getItem('dni');
@@ -35,6 +39,14 @@ window.onload = function(){
     inputEmail.value = localStorage.getItem('email');
     passwordInput.value = localStorage.getItem('password');
     inputConfirmPass.value = localStorage.getItem('confirm pass');
+    function removeModal() {
+        modal.classList.remove("show");
+        modal.classList.add("hidden");
+    }
+    function openModal() {
+        modal.classList.remove("hidden");
+        modal.classList.add("show");
+    }
     function containBorderGreen(form){
         for (let i = 0; i < form.elements.length; i++) {
             if (form.elements[i].matches('.green-border-ok')) {
@@ -68,18 +80,6 @@ window.onload = function(){
     function onlyNumbers(input) {
         for (let index = 0; index < input.length; index++) {
             if (input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) {
-            }else{
-                return false;
-            };
-        };
-        return true;
-    };
-    function numbersAndLetters(input){
-        for (let index = 0; index < input.length; index++) {
-            if ((input.codePointAt(index) >= 48 && input.codePointAt(index) <= 57) 
-            || (input.codePointAt(index) >= 65 && input.codePointAt(index) <= 90) 
-            || (input.codePointAt(index) >= 97 && input.codePointAt(index) <= 122)
-            || (input.codePointAt(index) >= 164 && input.codePointAt(index) <= 165)){
             }else{
                 return false;
             };
@@ -147,7 +147,9 @@ window.onload = function(){
     };
     inputDateOfBirth.onblur = function(){
         msjErrorDateOfBirth.classList.add('error-msj');
-        if(inputDateOfBirth.value === ''){
+        if(new Date(inputDateOfBirth.value).getTime() > new Date().getTime()){
+            invalidField(inputDateOfBirth, 'red-border-fail', msjErrorDateOfBirth, 'Incorrect date');
+        }else if(inputDateOfBirth.value === ''){
             invalidField(inputDateOfBirth, 'red-border-fail', msjErrorDateOfBirth, 'Empty field');
         }else{
             inputDateOfBirth.classList.add('green-border-ok');
@@ -171,11 +173,11 @@ window.onload = function(){
     };
     inputAddress.onblur = function(){
         msjErrorAddress.classList.add('error-msj');
-        if (onlyLetters(inputAddress.value.trim()) || onlyNumbers(inputAddress.value.trim())) {
+        if(onlyLetters(inputAddress.value) || onlyNumbers(inputAddress.value)) {
             invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain only letters and numbers');
-        } else if (!inputAddress.value.includes(' ')) {
+        } else if(!inputAddress.value.indexOf(' ')) {
             invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain at least one space');
-        } else if (!space(inputAddress.value)) {
+        } else if(!space(inputAddress.value)) {
             invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'cannot contain trailing spaces');
         } else if(inputAddress.value.length < 6){
             invalidField(inputAddress, 'red-border-fail', msjErrorAddress, 'must contain more than 6 characters');
@@ -188,13 +190,15 @@ window.onload = function(){
     };
     inputCity.onblur = function(){
         msjErrorCity.classList.add('error-msj');
-        if(!numbersAndLetters(inputCity.value)){
+        if(onlyLetters(inputCity.value) || onlyNumbers(inputCity.value)) {
             invalidField(inputCity, 'red-border-fail', msjErrorCity, 'must contain only letters and numbers');
-        }else if(inputCity.value.trim().length < 3){
+        } else if(!inputCity.value.indexOf(' ')) {
+            invalidField(inputCity, 'red-border-fail', msjErrorCity, 'must contain at least one space');
+        }else if(inputCity.value.length < 3){
             invalidField(inputCity, 'red-border-fail', msjErrorCity, 'must contain more than 3 characters');
-        }else{
+        } else {
             inputCity.classList.add('green-border-ok');
-        };
+        }
     };
     inputCity.onfocus = function(){
         removeTextAndBorder(inputCity, msjErrorCity);
@@ -273,8 +277,9 @@ window.onload = function(){
             return req.json();
         })
         .then(function(dataJSON){
-            if (dataJSON.success) {
-                alert('Request response: \n' + 'Name: ' + inputName.value
+            if(dataJSON.success){
+                modalTitle.innerText ='Request completed';
+                modalBodyText.innerText ='Request response: \n' + 'Name: ' + inputName.value
                 + '\n Lastname: ' + inputLastName.value + '\n Dni: '
                 + inputDni.value + '\n Birdth of day: ' + dobInvested
                 + '\n Phone: ' + inputPhone.value + '\n Address: '
@@ -282,7 +287,7 @@ window.onload = function(){
                 + '\n Postal code: ' + inputPostalCode.value
                 + '\n Email: ' + inputEmail.value + '\n Password: '
                 + passwordInput.value + '\n Confirm password: '
-                + inputConfirmPass.value);
+                + inputConfirmPass.value;
                 localStorage.setItem('name', inputName.value);
                 localStorage.setItem('last name', inputLastName.value);
                 localStorage.setItem('dni', inputDni.value);
@@ -294,24 +299,25 @@ window.onload = function(){
                 localStorage.setItem('email', inputEmail.value);
                 localStorage.setItem('password', passwordInput.value);
                 localStorage.setItem('confirm pass', inputConfirmPass.value);
+                openModal();
                 containBorderGreen(form);
             } else {
-                return dataJSON; 
-            }
-        })
-        .then(function(dataJSON){
-            console.log(dataJSON);
-            errors = dataJSON.errors;
-            console.log(errors);
-            var errors = [];
-            for (let i = 0; i < dataJSON.errors.length; i++) {
-                errors += '\n' + dataJSON.errors[i].msg;
-            }
-            throw new Error(errors);
+                errors = dataJSON.errors;
+                var errors = [];
+                for(let i = 0; i < dataJSON.errors.length; i++) {
+                    errors += '\n' + dataJSON.errors[i].msg;
+                }
+                throw new Error(errors); 
+                }
         })
         .catch(function(error){
-            alert(error);
-        })          
+            modalTitle.innerText = 'Oops something wrong';
+            modalBodyText.innerText = error;
+            openModal();
+        })         
+    };
+    btnCloseModal.onclick= function(){
+        removeModal();
     };
 };
 

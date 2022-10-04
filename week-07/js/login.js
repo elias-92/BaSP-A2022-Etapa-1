@@ -6,6 +6,18 @@ window.onload = function(){
     var msjErrorPass = document.createElement('small');
     var btnSubmit = document.getElementById('btnForm');
     var form = document.getElementById('form');
+    var modal = document.getElementById('modal');
+    var modalTitle = document.getElementById('modalTitle');
+    var modalBodyText = document.getElementById('modalBody');
+    var btnCloseModal = document.getElementById('closeModal');
+    function removeModal() {
+        modal.classList.remove("show");
+        modal.classList.add("hidden");
+    }
+    function openModal() {
+        modal.classList.remove("hidden");
+        modal.classList.add("show");
+    }
     function containBorderGreen(form){
         for (let i = 0; i < form.elements.length; i++) {
             if (form.elements[i].matches('.green-border-ok')) {
@@ -105,19 +117,31 @@ window.onload = function(){
             return req.json();
         })
         .then(function(dataJSON){
-            if (dataJSON.success) {
-                alert('Success: ' + dataJSON.success + '\n' + dataJSON.msg + '\n Email: ' + inputEmail.value
-                + '\n Password: ' + passwordInput.value);
-                containBorderGreen(form);
+            if (!dataJSON.success && inputEmail.classList.contains('.green-border-ok') && 
+            passwordInput.classList.contains('.green-border-ok')){
+                console.log(dataJSON.msg);
+                throw new Error(dataJSON.msg);
+            }else if(!dataJSON.success){
+                var errors = [];
+                for(let i = 0; i < dataJSON.errors.length; i++) {
+                    errors += '\n' + dataJSON.errors[i].msg;
+                }
+                throw new Error(errors);
             } else {
-                return dataJSON;
+                modalTitle.innerText ='Request completed';
+                modalBodyText.innerText = 'Success: ' + dataJSON.success + '\n' + dataJSON.msg + '\n Email: ' + inputEmail.value
+                + '\n Password: ' + passwordInput.value;
+                openModal();
+                containBorderGreen(form);
             }
         })
-        .then(function(dataJSON){
-            throw new Error(dataJSON.msg);
-        })
         .catch(function(error){
-            alert(error);
+            modalTitle.innerText = 'Oops something wrong';
+            modalBodyText.innerText = error;
+            openModal();
         })
+    };
+    btnCloseModal.onclick= function(){
+        removeModal();
     };
 };
