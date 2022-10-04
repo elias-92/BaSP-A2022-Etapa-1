@@ -117,9 +117,7 @@ window.onload = function(){
             return req.json();
         })
         .then(function(dataJSON){
-            if (!dataJSON.success && inputEmail.classList.contains('.green-border-ok') && 
-            passwordInput.classList.contains('.green-border-ok')){
-                console.log(dataJSON.msg);
+            if (dataJSON.msg){
                 throw new Error(dataJSON.msg);
             }else if(!dataJSON.success){
                 var errors = [];
@@ -141,7 +139,7 @@ window.onload = function(){
             openModal();
         })
     };
-    btnCloseModal.onclick= function(){
+    btnCloseModal.onclick = function(){
         removeModal();
     };
 };
